@@ -152,7 +152,7 @@ a { color: inherit; text-decoration: none; }
 .filter-row { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
 .filter-label {
   font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .6px; color: var(--muted); width: 78px; flex-shrink: 0;
+  letter-spacing: .6px; color: var(--muted); width: 90px; flex-shrink: 0;
 }
 .pill {
   display: inline-flex; align-items: center; gap: 5px;
@@ -171,7 +171,7 @@ a { color: inherit; text-decoration: none; }
 .results-bar { font-size: 13px; color: var(--muted); margin: 18px 0 8px; }
 .results-bar strong { color: var(--text); }
 
-.section { margin: 36px 0 48px; scroll-margin-top: 88px; }
+.section { margin: 36px 0 48px; scroll-margin-top: 168px; }
 .section.hidden { display: none; }
 .section-title { font-size: 24px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 6px; }
 .section-sub { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
@@ -229,6 +229,8 @@ a { color: inherit; text-decoration: none; }
 .tag-geo { background: var(--pink-bg); color: var(--pink-deep); }
 .tag-foreign { background: var(--blue-bg); color: var(--blue); }
 .tag-cis { background: #f7f6f3; color: var(--muted); }
+.tag-agency { background: var(--orange-bg); color: var(--orange); }
+.tag-inhouse { background: var(--green-bg); color: var(--green); }
 .location { font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
 .desc { font-size: 13.5px; color: var(--text2); line-height: 1.65; margin-bottom: 12px; }
 .desc strong { color: var(--text); }
@@ -335,7 +337,7 @@ a { color: inherit; text-decoration: none; }
     </div>
     <div class="live-badge">
       <div class="dot"></div>
-      Обновлено <span id="live-date"></span> · Кипр → remote · акцент на СНГ-корни
+      Обновлено <span id="live-date"></span> · Кипр → remote · EdTech → ивенты / комьюнити
     </div>
   </div>
 </header>
@@ -358,8 +360,8 @@ a { color: inherit; text-decoration: none; }
       <span class="filter-label">Сфера</span>
       <button class="pill active" data-f="ind" data-v="all">Все</button>
       <button class="pill" data-f="ind" data-v="edtech">EdTech</button>
+      <button class="pill" data-f="ind" data-v="events">Ивенты / комьюнити</button>
       <button class="pill" data-f="ind" data-v="health">Health</button>
-      <button class="pill" data-f="ind" data-v="events">Events</button>
       <button class="pill" data-f="ind" data-v="fintech">Fintech</button>
       <button class="pill" data-f="ind" data-v="saas">SaaS</button>
       <button class="pill" data-f="ind" data-v="gamedev">Gamedev</button>
@@ -370,7 +372,21 @@ a { color: inherit; text-decoration: none; }
       <button class="pill active" data-f="level" data-v="all">Все</button>
       <button class="pill" data-f="level" data-v="head">CMO / Head / VP</button>
       <button class="pill" data-f="level" data-v="lead">Lead</button>
-      <button class="pill" data-f="level" data-v="sr">Senior</button>
+      <button class="pill" data-f="level" data-v="sr">Senior / solo</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Тип</span>
+      <button class="pill active" data-f="type" data-v="all">Все</button>
+      <button class="pill" data-f="type" data-v="inhouse">In-house</button>
+      <button class="pill" data-f="type" data-v="agency">Агентства</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Открыта</span>
+      <button class="pill active" data-f="posted" data-v="all">Все</button>
+      <button class="pill" data-f="posted" data-v="2d">Сегодня / вчера</button>
+      <button class="pill" data-f="posted" data-v="7d">До 1 недели</button>
+      <button class="pill" data-f="posted" data-v="30d">До 1 мес</button>
+      <button class="pill" data-f="posted" data-v="older">Больше 1 мес</button>
     </div>
   </div>
 
@@ -382,10 +398,10 @@ a { color: inherit; text-decoration: none; }
       <div class="review-card yes">
         <h3>Брать</h3>
         <ul>
-          <li>CMO / Head of Marketing / Head of PMM</li>
-          <li>B2C: запуски, PMF, маркетинг 360°</li>
-          <li>Роли «маркетинг + продажи»</li>
-          <li>СНГ-корни — в приоритете поиска</li>
+          <li>CMO / Head / Lead / PMM. Senior или без уровня — если маркетолог один</li>
+          <li><strong>EdTech</strong> — первый акцент</li>
+          <li><strong>Ивенты и комьюнити</strong> — второй: форумы, конференции, сообщества (REFORUM / АНКОР)</li>
+          <li>In-house и агентства — оба. СНГ-корни в приоритете поиска</li>
         </ul>
       </div>
       <div class="review-card no">
@@ -403,7 +419,7 @@ a { color: inherit; text-decoration: none; }
       </div>
       <div class="review-card warn">
         <h3>Язык</h3>
-        <p>English B1. Часть международных VP на Кипре закроется. Честно проговаривать. Русский как рабочий язык — плюс в СНГ-командах.</p>
+        <p>English B1 — не стоп. Если JD на английском или просят C1 / native — на карточке ⚠️. Русский как рабочий язык — плюс в СНГ-командах.</p>
       </div>
     </div>
   </section>
@@ -457,11 +473,11 @@ a { color: inherit; text-decoration: none; }
       </div>
       <div class="review-card yes">
         <h3>Lead</h3>
-        <p>Можно. Воронка, CRM, growth, PMM — если путь к Head понятен.</p>
+        <p>Можно. Growth Lead, PMM Lead, Community Lead — если это лид направления, не «старший специалист».</p>
       </div>
-      <div class="review-card warn">
-        <h3>Senior — редкие случаи</h3>
-        <p>Только если продукт молодой и маркетолог по сути один: стратегия + руки. Не Senior IC в большой корпорации.</p>
+      <div class="review-card yes">
+        <h3>Senior / без уровня</h3>
+        <p>Да, если маркетолог по сути один: первый, единственный, founding. Стратегия + руки. Не Senior IC в корпорации.</p>
       </div>
     </div>
   </section>
@@ -471,7 +487,7 @@ a { color: inherit; text-decoration: none; }
     <p class="section-sub">Офис или хаб на острове</p>
     <div class="grid">
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="edtech saas" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="edtech saas" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">94%</div>
         <div class="card-top">
           <div class="logo">🎓</div>
@@ -481,6 +497,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-geo">🇨🇾 Limassol / Athens / Remote EMEA</span>
           <span class="tag tag-level-h">VP / Head</span>
@@ -491,6 +508,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Единственный крупный EdTech с HQ на Кипре. Коммерческий маркетинг-лид: pipeline, PLG + sales. Продукт — почти идеальный мэтч. Разрыв: B2B SaaS на английском и VP под уже нанятым CMO.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.learnworlds.com" target="_blank">LearnWorlds</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank">Workable</a> · <a href="https://www.learnworlds.com/job/vp-of-marketing-growth-demand-generation-remote-emea/" target="_blank">JD</a></div>
           <div class="contact-row">👤 Hiring: <a href="https://www.linkedin.com/in/constantinos-simaioforidis" target="_blank">Constantinos Simaioforidis</a></div>
           <div class="contact-row">👤 CMO: <a href="https://www.linkedin.com/in/darioderna" target="_blank">Dario Derna</a> · CEO: <a href="https://www.linkedin.com/in/panossiozos" target="_blank">Panos Siozos</a></div>
@@ -502,7 +521,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" style="--card-accent:#2383e2">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
         <div class="match">61%</div>
         <div class="card-top">
           <div class="logo">📣</div>
@@ -512,6 +531,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-geo">🇨🇾 Hybrid Кипр / Греция</span>
           <span class="tag tag-level-h">Head</span>
@@ -522,6 +542,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Иностранный брокер с хабом на Кипре. Роль — коммуникации, не CMO 360°. Имеет смысл как вход в XM, не как цель.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.xm.com" target="_blank">XM</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.eu.lever.co/xm/34009ea8-a0c2-47c8-bd4e-80ee1f044168" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://jobs.eu.lever.co/xm/34009ea8-a0c2-47c8-bd4e-80ee1f044168" target="_blank">Lever</a></div>
           <div class="contact-row">📧 <a href="mailto:careers@xm.com">careers@xm.com</a></div>
         </div>
@@ -531,7 +553,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="events fintech" data-level="head" style="--card-accent:#6940a5">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="events" data-level="head" data-posted="2026-07-28" data-type="agency" style="--card-accent:#6940a5">
         <div class="match">70%</div>
         <div class="card-top">
           <div class="logo">🎤</div>
@@ -541,17 +563,19 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-office">🏙️ Limassol office</span>
           <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">Events</span>
+          <span class="tag tag-ind">Ивенты / комьюнити</span>
         </div>
         <div class="location">📍 Рядом с COO Events</div>
-        <div class="desc">Мэтч по ивент-маркетингу (REFORUM: 70K / 10 млн). Портфель брендов, партнёрства, sponsorship. Английский обязателен.</div>
+        <div class="desc">Второй акцент: ивенты. Мэтч по REFORUM (70K / 10 млн) — портфель брендов, партнёрства, sponsorship. Английский обязателен.</div>
         <div class="contacts">
-          <div class="contacts-label">Контакты</div>
+          <div class="contacts-label">Ссылки</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.grsrecruitment.com" target="_blank">GRS Recruitment</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.grsrecruitment.com/job/head-of-growth-and-strategy-11194.aspx" target="_blank">Вакансия</a></div>
           <div class="contact-row">📧 <a href="mailto:hayley@grsrecruitment.com?subject=Ref%2011194%20Head%20of%20Growth">hayley@grsrecruitment.com</a> · Ref <strong>11194</strong></div>
-          <div class="contact-row">🌐 <a href="https://jobs.grsrecruitment.com/job/head-of-growth-and-strategy-11194.aspx" target="_blank">GRS listing</a></div>
         </div>
         <div class="card-foot">
           <span class="post-date">📅 28 июля 2026</span>
@@ -559,7 +583,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" style="--card-accent:#c1440e">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" data-posted="2026-06-01" data-type="agency" style="--card-accent:#c1440e">
         <div class="match">62%</div>
         <div class="card-top">
           <div class="logo">📈</div>
@@ -569,6 +593,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-remote">🌐 Remote Cyprus / Europe</span>
           <span class="tag tag-level-h">Head · первый маркетолог</span>
@@ -579,6 +604,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Маркетолог один на молодом продукте. Формат роли — её. Вертикаль и вилка — нет. Быстрый вход на Кипре.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.ultrarecruitment.com" target="_blank">ULTRA Recruitment</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://cy.joblum.com/job/head-of-marketing-forex-prop-trading/29116" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://cy.joblum.com/job/head-of-marketing-forex-prop-trading/29116" target="_blank">Joblum / ULTRA Recruitment</a></div>
         </div>
         <div class="card-foot">
@@ -587,7 +614,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" style="--card-accent:#0f7b6c">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#0f7b6c">
         <div class="match">72%</div>
         <div class="card-top">
           <div class="logo">💳</div>
@@ -597,6 +624,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-geo">🇨🇾 Nicosia / Limassol / Larnaca · Hybrid</span>
           <span class="tag tag-level-h">CMO</span>
@@ -606,6 +634,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">CMO на Кипре: бренд, CPA, lean-команда. Не EdTech. Формат — её: вся функция и P&amp;L.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://talentin.com" target="_blank">Talentin</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://talentin.teamtailor.com/jobs/8004390-chief-marketing-officer-for-fintech-company" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://talentin.teamtailor.com/jobs/8004390-chief-marketing-officer-for-fintech-company" target="_blank">Talentin</a></div>
         </div>
         <div class="card-foot">
@@ -614,7 +644,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="fintech" data-level="head" style="--card-accent:#c1440e">
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="fintech" data-level="head" data-posted="2026-07-31" data-type="agency" style="--card-accent:#c1440e">
         <div class="match">76%</div>
         <div class="card-top">
           <div class="logo">📊</div>
@@ -624,6 +654,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote / on-site Cyprus</span>
           <span class="tag tag-level-h">Head → CMO</span>
@@ -634,6 +665,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Вся функция: performance, CRM, brand, affiliate. English B2+. Берут и FinTech / eCom / dating.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://nazare.eu" target="_blank">NaZare</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://cyprus.hh.ru/vacancy/135795404" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://cyprus.hh.ru/vacancy/135795404" target="_blank">cyprus.hh.ru/vacancy/135795404</a></div>
           <div class="contact-row">В отклике просят Telegram.</div>
         </div>
@@ -643,7 +676,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="health" data-level="head" style="--card-accent:#0f7b6c">
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="health" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#0f7b6c">
         <div class="match">74%</div>
         <div class="card-top">
           <div class="logo">💪</div>
@@ -653,6 +686,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-geo">🇨🇾 Кипр / 🇺🇦 Украина · Remote</span>
           <span class="tag tag-level-h">Head</span>
@@ -663,6 +697,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">CIS-friendly B2C subscription на Кипре. Ближе к Head of UA, чем к CMO 360°.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://welltech.com" target="_blank">Welltech</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.ashbyhq.com/welltech/23d73643-98c7-4dd0-b5d5-2c2130f183af/application" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://jobs.ashbyhq.com/welltech/23d73643-98c7-4dd0-b5d5-2c2130f183af" target="_blank">Ashby</a></div>
         </div>
         <div class="card-foot">
@@ -671,7 +707,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="gamedev" data-level="head" style="--card-accent:#6940a5">
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="gamedev" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#6940a5">
         <div class="match">58%</div>
         <div class="card-top">
           <div class="logo">🎮</div>
@@ -681,6 +717,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-geo">🇨🇾 Limassol · remote</span>
           <span class="tag tag-level-h">Head</span>
@@ -691,6 +728,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Не 360°. Имеет смысл, если готовность вести performance в геймдеве.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://nexters.com" target="_blank">Nexters</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://cyprus.hh.ru/vacancy/135272779" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://cyprus.hh.ru/vacancy/135272779" target="_blank">cyprus.hh.ru/vacancy/135272779</a></div>
         </div>
         <div class="card-foot">
@@ -707,7 +746,7 @@ a { color: inherit; text-decoration: none; }
     <p class="section-sub">Вне Кипра · СНГ-корни сверху. hh.ru без фильтра по городу, только удалёнка</p>
     <div class="grid">
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-12" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">94%</div>
         <div class="card-top">
           <div class="logo">💻</div>
@@ -717,6 +756,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">Head → CMO</span>
@@ -726,6 +766,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">IT-школа, 13 лет. Играющий тренер: стратегия + руки. Путь к CMO. Опубликована 12 августа.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://hexlet.io" target="_blank">Хекслет</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135644950" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135644950" target="_blank">hh.ru/vacancy/135644950</a></div>
         </div>
         <div class="card-foot">
@@ -734,7 +776,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-13" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">92%</div>
         <div class="card-top">
           <div class="logo">🤖</div>
@@ -744,6 +786,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote · любая точка</span>
           <span class="tag tag-level-h">Head</span>
@@ -754,6 +797,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Карьерный EdTech (офферы в Google / Meta / Amazon). Основатели из Google, Yandex, TikTok, YC. Почти Careerum. Опубликована 13 августа, Астана как хаб.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://gooffer.ai" target="_blank">Go Offer</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/136191021" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/136191021" target="_blank">hh.ru/vacancy/136191021</a></div>
         </div>
         <div class="card-foot">
@@ -762,7 +807,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-11" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">90%</div>
         <div class="card-top">
           <div class="logo">🎨</div>
@@ -772,6 +817,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">CMO</span>
@@ -782,6 +828,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Вся функция и выручка. EdTech, контент + performance. Опубликована 11 августа.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Home Digital School · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/136131605" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/136131605" target="_blank">hh.ru/vacancy/136131605</a></div>
         </div>
         <div class="card-foot">
@@ -790,7 +838,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-07-21" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">84%</div>
         <div class="card-top">
           <div class="logo">🔐</div>
@@ -800,6 +848,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote worldwide</span>
           <span class="tag tag-level-h">CMO</span>
@@ -810,6 +859,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">EdTech по кибербезу. Нужен опыт в ИБ / аналитике / B2B. Опубликована 21 июля.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://cyberyozh.com" target="_blank">CyberYozh</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135443497" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135443497" target="_blank">hh.ru/vacancy/135443497</a></div>
         </div>
         <div class="card-foot">
@@ -818,7 +869,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" style="--card-accent:#0f7b6c">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" data-posted="2026-08-14" data-type="inhouse" style="--card-accent:#0f7b6c">
         <div class="match">83%</div>
         <div class="card-top">
           <div class="logo">📱</div>
@@ -828,6 +879,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote · Москва плюс, не обязательно</span>
           <span class="tag tag-level-h">Head</span>
@@ -837,6 +889,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Мобильные подписки. Performance уже есть — нужен Head 360°. Опубликована 14 августа.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://lagom.group" target="_blank">Lagom</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135913725" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135913725" target="_blank">hh.ru/vacancy/135913725</a></div>
         </div>
         <div class="card-foot">
@@ -845,7 +899,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="fintech" data-level="head" style="--card-accent:#c1440e">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="fintech" data-level="head" data-posted="2026-08-13" data-type="inhouse" style="--card-accent:#c1440e">
         <div class="match">75%</div>
         <div class="card-top">
           <div class="logo">💹</div>
@@ -855,6 +909,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote worldwide</span>
           <span class="tag tag-level-h">CMO</span>
@@ -864,6 +919,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Мобильный финтех. Performance + бренд + команда. English B2+. Опубликована 13 августа.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Peter Partner · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/134681753" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/134681753" target="_blank">hh.ru/vacancy/134681753</a></div>
         </div>
         <div class="card-foot">
@@ -872,7 +929,312 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="foreign" data-ind="edtech" data-level="head" style="--card-accent:#2383e2">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" data-posted="2026-07-28" data-type="inhouse" style="--card-accent:#2383e2">
+        <div class="match">72%</div>
+        <div class="card-top">
+          <div class="logo">🗂️</div>
+          <div>
+            <div class="card-title">Директор по маркетингу / CMO</div>
+            <div class="card-company">Kaiten · B2B SaaS · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-h">CMO</span>
+          <span class="tag tag-ind">SaaS</span>
+          <span class="tag tag-warn">⚠️ B2B, не с нуля</span>
+        </div>
+        <div class="location">📍 Академия, контент, SEO, performance, PMM, бюджет</div>
+        <div class="desc">Российский task-tracker. Усилить работающую систему, не ломать. Опубликована 28 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://kaiten.io" target="_blank">Kaiten</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135674390" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135674390" target="_blank">hh.ru/vacancy/135674390</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 28 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135674390" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-07-29" data-type="inhouse" style="--card-accent:#c45c7a">
+        <div class="match">82%</div>
+        <div class="card-top">
+          <div class="logo">📣</div>
+          <div>
+            <div class="card-title">Head of Marketing · онлайн-школа маркетинга</div>
+            <div class="card-company">SENCE.PROD · EdTech · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-h">Head</span>
+          <span class="tag tag-ind">EdTech</span>
+          <span class="tag tag-warn">⚠️ от 180 тыс. ₽</span>
+        </div>
+        <div class="location">📍 Вся система: контент, бренд, performance, запуски</div>
+        <div class="desc">Нужен опыт запусков в digital / онлайн-образовании. Опубликована 29 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 SENCE.PROD · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135722751" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135722751" target="_blank">hh.ru/vacancy/135722751</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 29 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135722751" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-07-24" data-type="inhouse" style="--card-accent:#c45c7a">
+        <div class="match">85%</div>
+        <div class="card-top">
+          <div class="logo">🏫</div>
+          <div>
+            <div class="card-title">CMO / Руководитель маркетинга (EdTech)</div>
+            <div class="card-company">SchoolSmart / МПЛУТ · экосистема для онлайн-школ · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-h">CMO</span>
+          <span class="tag tag-ind">EdTech</span>
+        </div>
+        <div class="location">📍 Аудит → стратегия 3–6 мес · лиды, воронки, запуски</div>
+        <div class="desc">EdTech для владельцев школ. Опыт в онлайн-образовании обязателен. Опубликована 24 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://school-smart.ru" target="_blank">SchoolSmart</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/134542359" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/134542359" target="_blank">hh.ru/vacancy/134542359</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 24 июля 2026</span>
+          <a href="https://hh.ru/vacancy/134542359" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-07-27" data-type="inhouse" style="--card-accent:#c45c7a">
+        <div class="match">88%</div>
+        <div class="card-top">
+          <div class="logo">🦊</div>
+          <div>
+            <div class="card-title">Head of Product Growth / Head of Growth</div>
+            <div class="card-company">Фоксфорд · детский EdTech · remote РФ / офис Тульская</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote по РФ</span>
+          <span class="tag tag-level-h">Head of Growth</span>
+          <span class="tag tag-ind">EdTech</span>
+        </div>
+        <div class="location">📍 Конверсия в оплату · доля платящих · эффективность</div>
+        <div class="desc">Крупнейшая детская онлайн-школа. Нужен руководитель growth, не «ещё один performance». Опубликована 27 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://foxford.ru" target="_blank">Фоксфорд</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135607154" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135607154" target="_blank">hh.ru/vacancy/135607154</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 27 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135607154" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-07-21" data-type="inhouse" style="--card-accent:#c45c7a">
+        <div class="match">80%</div>
+        <div class="card-top">
+          <div class="logo">🗣️</div>
+          <div>
+            <div class="card-title">CMO / Руководитель отдела маркетинга</div>
+            <div class="card-company">AgileFluent · English для IT · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-h">CMO</span>
+          <span class="tag tag-ind">EdTech</span>
+          <span class="tag tag-warn">⚠️ 250–350 тыс. ₽</span>
+        </div>
+        <div class="location">📍 Трафик, воронка, команда · связка с CEO</div>
+        <div class="desc">EdTech: офферы в международные компании + английский. Опубликована 21 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://agilefluent.com" target="_blank">AgileFluent</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135401825" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135401825" target="_blank">hh.ru/vacancy/135401825</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 21 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135401825" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" data-posted="2026-08-06" data-type="inhouse" style="--card-accent:#6940a5">
+        <div class="match">74%</div>
+        <div class="card-top">
+          <div class="logo">✈️</div>
+          <div>
+            <div class="card-title">Head of Growth and Commercial Business Unit</div>
+            <div class="card-company">YouTravel · маркетплейс авторских туров · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-h">Head of Growth</span>
+          <span class="tag tag-ind">SaaS · marketplace</span>
+        </div>
+        <div class="location">📍 Команда 10+: маркетинг, воронка, SEO/PPC/CPA</div>
+        <div class="desc">Demand на весь коммерческий блок. Не EdTech. Опубликована 6 августа.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://youtravel.me" target="_blank">YouTravel</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/134559691" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/134559691" target="_blank">hh.ru/vacancy/134559691</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 6 августа 2026</span>
+          <a href="https://hh.ru/vacancy/134559691" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" data-posted="2026-08-13" data-type="inhouse" style="--card-accent:#2383e2">
+        <div class="match">73%</div>
+        <div class="card-top">
+          <div class="logo">🔐</div>
+          <div>
+            <div class="card-title">Head of Marketing</div>
+            <div class="card-company">VPN-холдинг · несколько брендов · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote · встречи Москва</span>
+          <span class="tag tag-level-h">Head</span>
+          <span class="tag tag-ind">SaaS · apps</span>
+          <span class="tag tag-warn">⚠️ от 250 тыс. ₽ · график 6/1</span>
+        </div>
+        <div class="location">📍 Неограниченный бюджет · сотни тысяч пользователей</div>
+        <div class="desc">Вся функция по холдингу. Удалёнка, раз в две недели Москва. Опубликована 13 августа.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 VPN-холдинг · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135573323" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135573323" target="_blank">hh.ru/vacancy/135573323</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 13 августа 2026</span>
+          <a href="https://hh.ru/vacancy/135573323" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="fintech" data-level="head" data-posted="2026-07-30" data-type="inhouse" style="--card-accent:#0f7b6c">
+        <div class="match">70%</div>
+        <div class="card-top">
+          <div class="logo">📈</div>
+          <div>
+            <div class="card-title">Директор по маркетингу · инвестиции</div>
+            <div class="card-company">Dubrovsky · приложение для акций · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 100% remote</span>
+          <span class="tag tag-level-h">CMO · с нуля</span>
+          <span class="tag tag-ind">Fintech</span>
+        </div>
+        <div class="location">📍 Команда с нуля · продвижение мобильного приложения</div>
+        <div class="desc">Финтех-приложение, нулевой commission. Нужен опыт финтеха. Опубликована 30 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Dubrovsky · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135745097" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135745097" target="_blank">hh.ru/vacancy/135745097</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 30 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135745097" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="health" data-level="head" data-posted="2026-08-12" data-type="inhouse" style="--card-accent:#0f7b6c">
+        <div class="match">68%</div>
+        <div class="card-top">
+          <div class="logo">💊</div>
+          <div>
+            <div class="card-title">Chief Marketing Officer</div>
+            <div class="card-company">EWA PRODUCT · БАД / косметика / 7 стран · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-h">CMO</span>
+          <span class="tag tag-ind">Health</span>
+        </div>
+        <div class="location">📍 150+ SKU · бренд-ритейл · HQ Новосибирск, переезд не нужен</div>
+        <div class="desc">Международный бренд, не EdTech. Опубликована 12 августа.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://ewa.company" target="_blank">EWA PRODUCT</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135769381" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135769381" target="_blank">hh.ru/vacancy/135769381</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 12 августа 2026</span>
+          <a href="https://hh.ru/vacancy/135769381" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="foreign" data-ind="saas" data-level="head" data-posted="2026-07-30" data-type="inhouse" style="--card-accent:#2383e2">
+        <div class="match">58%</div>
+        <div class="card-top">
+          <div class="logo">🇨🇭</div>
+          <div>
+            <div class="card-title">Growth / Marketing / CMO · SaaS only</div>
+            <div class="card-company">Qualtir · Google WebApps · Swiss HQ · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-foreign">Иностранные</span>
+          <span class="tag tag-remote">🌐 Remote-first</span>
+          <span class="tag tag-level-h">CMO / growth</span>
+          <span class="tag tag-ind">SaaS</span>
+          <span class="tag tag-warn">⚠️ $4K · English C1 · команда без русского</span>
+        </div>
+        <div class="location">📍 15M+ пользователей · tasksboard.com / gpt.space</div>
+        <div class="desc">IT-продукт only. Русский в команде не используют. Опубликована 30 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://tasksboard.com" target="_blank">Qualtir</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135732108" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135732108" target="_blank">hh.ru/vacancy/135732108</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 30 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135732108" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="foreign" data-ind="edtech" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
         <div class="match">93%</div>
         <div class="card-top">
           <div class="logo">⚖️</div>
@@ -882,6 +1244,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-remote">🌐 100% remote</span>
           <span class="tag tag-level-h">Head · вся функция</span>
@@ -892,6 +1255,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Вся функция: бюджет, каналы, продукт↔growth. Legal education. Без немецкого, скорее всего, нет.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.jurafuchs.de" target="_blank">Jurafuchs</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank">Personio</a></div>
           <div class="contact-row">📧 <a href="mailto:support@jurafuchs.de">support@jurafuchs.de</a></div>
         </div>
@@ -901,7 +1266,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="foreign" data-ind="saas" data-level="head" style="--card-accent:#2383e2">
+      <div class="card" data-geo="remote" data-origin="foreign" data-ind="saas" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
         <div class="match">68%</div>
         <div class="card-top">
           <div class="logo">📦</div>
@@ -911,6 +1276,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-remote">🌐 Remote EU</span>
           <span class="tag tag-level-h">Head</span>
@@ -921,6 +1287,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Иностранный SaaS. Не EdTech и не B2C. Имеет смысл, если тянуть B2B inbound.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.easyship.com" target="_blank">Easyship</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://job-boards.greenhouse.io/easyship/jobs/4680863006" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://job-boards.greenhouse.io/easyship/jobs/4680863006" target="_blank">Greenhouse</a></div>
         </div>
         <div class="card-foot">
@@ -929,7 +1297,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="eu" data-origin="foreign" data-ind="saas" data-level="head" style="--card-accent:#6940a5">
+      <div class="card" data-geo="eu" data-origin="foreign" data-ind="saas" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#6940a5">
         <div class="match">64%</div>
         <div class="card-top">
           <div class="logo">🟣</div>
@@ -939,6 +1307,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-office">🏙️ On-site EU</span>
           <span class="tag tag-level-h">Head</span>
@@ -949,6 +1318,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Сильная вилка. Нужна релокация в EU. Не Кипр.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.fonio.com" target="_blank">fonio</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.ashbyhq.com/fonio/cb317a2c-5e38-4d10-b407-ab5355c94e8d" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://jobs.ashbyhq.com/fonio/cb317a2c-5e38-4d10-b407-ab5355c94e8d" target="_blank">Ashby</a></div>
         </div>
         <div class="card-foot">
@@ -957,7 +1328,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#c45c7a">
         <div class="match">91%</div>
         <div class="card-top">
           <div class="logo">🎯</div>
@@ -967,6 +1338,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">CMO</span>
@@ -976,6 +1348,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Career EdTech. Acquisition → retention → монетизация. AI в воронке. Почти её профиль: Careerum / Future Hub.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://rockethunt.ai" target="_blank">RocketHunt</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://rockethunt.ai/en/vacancies/7928262c-857a-497f-be17-7d3770fa8dd4" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://rockethunt.ai/en/vacancies/7928262c-857a-497f-be17-7d3770fa8dd4" target="_blank">RocketHunt</a></div>
         </div>
         <div class="card-foot">
@@ -984,7 +1358,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#c45c7a">
         <div class="match">84%</div>
         <div class="card-top">
           <div class="logo">📚</div>
@@ -994,6 +1368,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">CMO</span>
@@ -1004,6 +1379,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Международный EdTech, поиск через украинского рекрутера. Бюджет большой. Нужен украинский.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://apercon.com" target="_blank">Apercon</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://apercon.com/jobs/chief-marketing-officer-cmo-edtech/" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://apercon.com/jobs/chief-marketing-officer-cmo-edtech/" target="_blank">Apercon</a></div>
           <div class="contact-row">💬 Telegram: @Katerina_Asauliuk</div>
         </div>
@@ -1013,7 +1390,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">80%</div>
         <div class="card-top">
           <div class="logo">🧑‍💻</div>
@@ -1023,6 +1400,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">Head / Lead</span>
@@ -1032,6 +1410,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">B2C subscription, Tier-1. Свести UA + креатив + PMM в одну систему. Проверить, что роль ещё открыта.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://mate.academy" target="_blank">Mate academy</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://djinni.co/jobs/829676-head-of-growth/" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://djinni.co/jobs/829676-head-of-growth/" target="_blank">Djinni</a></div>
         </div>
         <div class="card-foot">
@@ -1040,7 +1420,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" style="--card-accent:#787774">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" data-posted="2026-07-30" data-type="agency" style="--card-accent:#787774">
         <div class="match">71%</div>
         <div class="card-top">
           <div class="logo">🧩</div>
@@ -1050,6 +1430,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">Head · solo</span>
@@ -1060,6 +1441,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Редкий Senior/Head «один на продукт». Нужен опыт US. Не EdTech.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Первый маркетолог · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135743606" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135743606" target="_blank">hh.ru/vacancy/135743606</a></div>
         </div>
         <div class="card-foot">
@@ -1068,7 +1451,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" style="--card-accent:#787774">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="saas" data-level="head" data-posted="2026-07-27" data-type="inhouse" style="--card-accent:#787774">
         <div class="match">66%</div>
         <div class="card-top">
           <div class="logo">🏷️</div>
@@ -1078,6 +1461,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote worldwide</span>
           <span class="tag tag-level-h">CMO</span>
@@ -1087,6 +1471,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Первый маркетинг-лид. Не EdTech. ТК РФ в условиях — уточнить с Кипра.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://indeepa.com" target="_blank">Indeepa</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135622310" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135622310" target="_blank">hh.ru/vacancy/135622310</a></div>
         </div>
         <div class="card-foot">
@@ -1102,7 +1488,7 @@ a { color: inherit; text-decoration: none; }
     <h2 class="section-title">Lead</h2>
     <div class="grid">
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="lead" style="--card-accent:#c45c7a">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="lead" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#c45c7a">
         <div class="match">86%</div>
         <div class="card-top">
           <div class="logo">🧒</div>
@@ -1112,6 +1498,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote · GMT+3</span>
           <span class="tag tag-level-l">Lead / Growth PM</span>
@@ -1121,6 +1508,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Воронка и монетизация — её зона. Это Growth PM, не Head. CIS, remote-first.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.novakidschool.com" target="_blank">Novakid</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank">Novakid Recruitee</a></div>
         </div>
         <div class="card-foot">
@@ -1129,7 +1518,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="health" data-level="lead" style="--card-accent:#0f7b6c">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="health" data-level="lead" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#0f7b6c">
         <div class="match">81%</div>
         <div class="card-top">
           <div class="logo">✉️</div>
@@ -1139,6 +1528,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-l">Lead / Manager</span>
@@ -1148,6 +1538,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">На Future Hub CRM дал 70% выручки. Вход в Welltech, если Head of Growth слишком UA.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://welltech.com" target="_blank">Welltech</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.ashbyhq.com/welltech" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://jobs.ashbyhq.com/welltech" target="_blank">Ashby · Welltech</a></div>
         </div>
         <div class="card-foot">
@@ -1160,11 +1552,11 @@ a { color: inherit; text-decoration: none; }
   </section>
 
   <section class="section" id="senior">
-    <h2 class="section-title">Senior · точечно</h2>
-    <p class="section-sub">Молодой продукт или сильная зона. Не цель.</p>
+    <h2 class="section-title">Senior / solo</h2>
+    <p class="section-sub">Маркетолог один или сильная зона. Не Senior IC в корпорации</p>
     <div class="grid">
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="sr" style="--card-accent:#2383e2">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="sr" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
         <div class="match">78%</div>
         <div class="card-top">
           <div class="logo">🔎</div>
@@ -1174,6 +1566,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-s">Senior</span>
@@ -1183,6 +1576,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Сильная зона, но research partner, не CMO. Мост в Novakid.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.novakidschool.com" target="_blank">Novakid</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote/c/new" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote" target="_blank">Novakid Recruitee</a></div>
         </div>
         <div class="card-foot">
@@ -1191,7 +1586,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="saas" data-level="sr" style="--card-accent:#787774">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="saas" data-level="sr" data-posted="2026-07-29" data-type="agency" style="--card-accent:#787774">
         <div class="match">55%</div>
         <div class="card-top">
           <div class="logo">🏢</div>
@@ -1201,6 +1596,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-office">🏙️ Limassol</span>
           <span class="tag tag-level-s">Senior / solo</span>
@@ -1210,6 +1606,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Формально «маркетолог один». Вилка не CMO. Запасной локальный вариант.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://www.grsrecruitment.com" target="_blank">GRS</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager" target="_blank">Вакансия</a></div>
           <div class="contact-row">📧 <a href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager">emilios@grsrecruitment.com</a> · Ref <strong>11269</strong></div>
           <div class="contact-row">☎️ +357 25 342 723</div>
         </div>
@@ -1227,7 +1625,7 @@ a { color: inherit; text-decoration: none; }
     <p class="section-sub">В конце списка. Кипр + remote + релокация</p>
     <div class="grid">
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" style="--card-accent:#1d1d1f">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-11" data-type="inhouse" style="--card-accent:#1d1d1f">
         <div class="match">70%</div>
         <div class="card-top">
           <div class="logo">🇧🇾</div>
@@ -1237,6 +1635,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Remote</span>
           <span class="tag tag-level-h">Head</span>
@@ -1247,6 +1646,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Полностью удалённо. Русский + English B2. Опубликована 11 августа.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Кэтлоджик · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135620251" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135620251" target="_blank">hh.ru/vacancy/135620251</a></div>
         </div>
         <div class="card-foot">
@@ -1255,7 +1656,69 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" style="--card-accent:#1d1d1f">
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-07-23" data-type="inhouse" style="--card-accent:#1d1d1f">
+        <div class="match">72%</div>
+        <div class="card-top">
+          <div class="logo">🎯</div>
+          <div>
+            <div class="card-title">CMO / Marketing Director</div>
+            <div class="card-company">Easy Hunt · iGaming B2C · Кипр · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-geo">🇨🇾 Кипр · remote</span>
+          <span class="tag tag-level-h">CMO</span>
+          <span class="tag tag-ind">iGaming</span>
+          <span class="tag tag-warn">⚠️ нужен опыт iGaming</span>
+        </div>
+        <div class="location">📍 Стратегия, media buying, affiliate, CRM, бренд · РФ / СНГ</div>
+        <div class="desc">ГПХ или ИП — от локации. Опубликована 23 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Easy Hunt · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135529350" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135529350" target="_blank">hh.ru/vacancy/135529350</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 23 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135529350" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-07-21" data-type="inhouse" style="--card-accent:#1d1d1f">
+        <div class="match">64%</div>
+        <div class="card-top">
+          <div class="logo">🪙</div>
+          <div>
+            <div class="card-title">CMO · Crypto Casino</div>
+            <div class="card-company">Бизоникс · запуск крипто-казино · Минск / remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
+          <span class="tag tag-cis">СНГ-корни</span>
+          <span class="tag tag-remote">🌐 Remote / гибрид Минск</span>
+          <span class="tag tag-level-h">CMO · с нуля</span>
+          <span class="tag tag-ind">iGaming</span>
+          <span class="tag tag-warn">⚠️ iGaming + crypto желательно</span>
+        </div>
+        <div class="location">📍 Affiliate, инфлюенсеры, комьюнити, CRM · опцион</div>
+        <div class="desc">Собственная платформа и Web3. Опубликована 21 июля.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 Бизоникс · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135429437" target="_blank">Вакансия</a></div>
+          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135429437" target="_blank">hh.ru/vacancy/135429437</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 21 июля 2026</span>
+          <a href="https://hh.ru/vacancy/135429437" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-13" data-type="inhouse" style="--card-accent:#1d1d1f">
         <div class="match">69%</div>
         <div class="card-top">
           <div class="logo">🎰</div>
@@ -1265,6 +1728,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-office">🏙️ Limassol 5/2</span>
           <span class="tag tag-level-h">Head</span>
@@ -1275,6 +1739,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Опубликована 13 августа. Офис Limassol. English C1. iGaming обязателен.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 STARTRIBE · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://cyprus.hh.ru/vacancy/136225254" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://cyprus.hh.ru/vacancy/136225254" target="_blank">cyprus.hh.ru/vacancy/136225254</a></div>
         </div>
         <div class="card-foot">
@@ -1283,7 +1749,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="igaming" data-level="head" style="--card-accent:#1d1d1f">
+      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="igaming" data-level="head" data-posted="2026-06-15" data-type="inhouse" style="--card-accent:#1d1d1f">
         <div class="match">67%</div>
         <div class="card-top">
           <div class="logo">🌍</div>
@@ -1293,6 +1759,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-inhouse">In-house</span>
           <span class="tag tag-foreign">Иностранные</span>
           <span class="tag tag-office">🏙️ Cyprus reloc</span>
           <span class="tag tag-level-h">CMO</span>
@@ -1303,6 +1770,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Вся функция: бренд, growth, player experience. Build-роль. English fluent.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 B2Tech · <span class="contact-muted">сайт не найден</span></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://www.cypruswork.com/job/105592/chief-marketing-officer/" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://www.cypruswork.com/job/105592/chief-marketing-officer/" target="_blank">Cyprus Work</a></div>
         </div>
         <div class="card-foot">
@@ -1311,7 +1780,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" style="--card-accent:#1d1d1f">
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#1d1d1f">
         <div class="match">65%</div>
         <div class="card-top">
           <div class="logo">🎲</div>
@@ -1321,6 +1790,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-geo">🇨🇾 Релокация на Кипр</span>
           <span class="tag tag-level-h">CMO</span>
@@ -1330,6 +1800,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Нужен опыт CMO в B2C casino. Пакет релокации.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://rockethunt.ai" target="_blank">RocketHunt</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://rockethunt.ai/en/vacancies/89e286c3-8025-4daf-a4f3-3b4fdf15f770" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://rockethunt.ai/en/vacancies/89e286c3-8025-4daf-a4f3-3b4fdf15f770" target="_blank">RocketHunt</a></div>
         </div>
         <div class="card-foot">
@@ -1338,7 +1810,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" style="--card-accent:#1d1d1f">
+      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#1d1d1f">
         <div class="match">63%</div>
         <div class="card-top">
           <div class="logo">🪙</div>
@@ -1348,6 +1820,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-remote">🌐 Fully remote</span>
           <span class="tag tag-level-h">CMO · с нуля</span>
@@ -1357,6 +1830,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Маркетинг с нуля, P&amp;L, партнёрская сеть. Нужен crypto / Web3 / iGaming.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://talentin.com" target="_blank">Talentin</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://talentin.teamtailor.com/jobs/7144931-chief-marketing-officer-for-igaming" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://talentin.teamtailor.com/jobs/7144931-chief-marketing-officer-for-igaming" target="_blank">Talentin</a></div>
         </div>
         <div class="card-foot">
@@ -1365,7 +1840,7 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" style="--card-accent:#1d1d1f">
+      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#1d1d1f">
         <div class="match">62%</div>
         <div class="card-top">
           <div class="logo">📍</div>
@@ -1375,6 +1850,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
         <div class="tags">
+          <span class="tag tag-agency">Агентство</span>
           <span class="tag tag-cis">СНГ-корни</span>
           <span class="tag tag-geo">🇨🇾 Remote / hybrid / reloc</span>
           <span class="tag tag-level-h">CMO</span>
@@ -1384,6 +1860,8 @@ a { color: inherit; text-decoration: none; }
         <div class="desc">Региональный рост: acquisition, affiliate, influencer, CRM. High-risk B2C.</div>
         <div class="contacts">
           <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🏢 <a class="link-company" href="https://rockethunt.ai" target="_blank">RocketHunt</a></div>
+          <div class="contact-row">📄 <a class="link-vacancy" href="https://rockethunt.ai/en/vacancies/bec49223-06c4-4484-a523-b50388457e74" target="_blank">Вакансия</a></div>
           <div class="contact-row">🌐 <a href="https://rockethunt.ai/en/vacancies/bec49223-06c4-4484-a523-b50388457e74" target="_blank">RocketHunt</a></div>
         </div>
         <div class="card-foot">
@@ -1402,7 +1880,7 @@ a { color: inherit; text-decoration: none; }
 
   <section class="section" id="sources">
     <h2 class="section-title">Источники</h2>
-    <p class="section-sub">hh.ru — первый шаг. Дальше Кипр, LinkedIn, агрегаторы</p>
+    <p class="section-sub"><span id="sources-count"></span> площадок. hh → LinkedIn / соцсети → Кипр → агрегаторы → Telegram → ивенты → iGaming</p>
 
     <div class="sources-group-label">hh.ru</div>
     <div class="sources-grid">
@@ -1422,9 +1900,21 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">🌐</span><span class="source-name">hh.ru · remote</span><span class="source-badge badge-good">удалёнка</span></div>
         <div class="source-desc">График «удалённо». Хаб в постинге может быть Москва / Астана / Минск — смотреть формат, не город.</div>
       </a>
-      <a class="source-card" href="https://hh.ru/search/vacancy?text=%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80+%D0%BF%D0%BE+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D1%83&amp;schedule=remote&amp;search_field=name" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🟡</span><span class="source-name">hh.ru · директор · remote</span><span class="source-badge badge-good">RU title</span></div>
-        <div class="source-desc">Русскоязычное название. Часто нет в английском запросе.</div>
+      <a class="source-card" href="https://hh.ru/search/vacancy?text=%22Growth+Lead%22+OR+%22Product+Marketing+Lead%22+OR+%22PMM+Lead%22+OR+%22Marketing+Lead%22+OR+%22%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D0%B0%22&amp;schedule=remote&amp;search_field=name" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🧩</span><span class="source-name">hh.ru · Lead / PMM · remote</span><span class="source-badge badge-best">ключевики</span></div>
+        <div class="source-desc">Growth Lead, PMM Lead, Marketing Lead. Не только Head.</div>
+      </a>
+      <a class="source-card" href="https://hh.ru/search/vacancy?text=EdTech+AND+%28CMO+OR+%22Head+of+Marketing%22+OR+%22Head+of+Growth%22+OR+%22%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80+%D0%BF%D0%BE+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D1%83%22%29&amp;schedule=remote" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎓</span><span class="source-name">hh.ru · EdTech · remote</span><span class="source-badge badge-best">акцент 1</span></div>
+        <div class="source-desc">CMO / Head в онлайн-школах и LMS.</div>
+      </a>
+      <a class="source-card" href="https://hh.ru/search/vacancy?text=%22Head+of+Events%22+OR+%22Head+of+Community%22+OR+%22Event+Marketing%22+OR+%22Community+Lead%22+OR+%D0%B8%D0%B2%D0%B5%D0%BD%D1%82+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3+OR+%D0%BA%D0%BE%D0%BC%D1%8C%D1%8E%D0%BD%D0%B8%D1%82%D0%B8&amp;schedule=remote" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎤</span><span class="source-name">hh.ru · ивенты / комьюнити</span><span class="source-badge badge-best">акцент 2</span></div>
+        <div class="source-desc">Форумы, конференции, community. Как REFORUM.</div>
+      </a>
+      <a class="source-card" href="https://hh.ru/search/vacancy?text=%22%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%22+OR+%22%D0%B5%D0%B4%D0%B8%D0%BD%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%22+OR+%22founding+marketer%22&amp;schedule=remote" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">👤</span><span class="source-name">hh.ru · solo / первый маркетолог</span><span class="source-badge badge-good">Senior</span></div>
+        <div class="source-desc">Без Head в названии. Класть, только если маркетолог один.</div>
       </a>
     </div>
 
@@ -1462,9 +1952,21 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">🔍</span><span class="source-name">finder.work</span><span class="source-badge badge-ok">агрегатор</span></div>
         <div class="source-desc">Не только IT.</div>
       </a>
+      <a class="source-card" href="https://www.superjob.ru/vacancy/search/?keywords=CMO%20Head%20of%20Marketing%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BF%D0%BE%20%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D1%83" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🔵</span><span class="source-name">Superjob</span><span class="source-badge badge-ok">РФ</span></div>
+        <div class="source-desc">Директор по маркетингу, в том числе EdTech и ивенты.</div>
+      </a>
+      <a class="source-card" href="https://jooble.org/SearchResult?ukw=Head+of+Marketing+EdTech+remote" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🕸️</span><span class="source-name">Jooble</span><span class="source-badge badge-ok">метапоиск</span></div>
+        <div class="source-desc">Склеивает hh, Superjob, карьеры.</div>
+      </a>
+      <a class="source-card" href="https://otta.com/jobs?search=head+of+marketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🟣</span><span class="source-name">Otta</span><span class="source-badge badge-good">EU стартапы</span></div>
+        <div class="source-desc">Head / PMM в европейских стартапах.</div>
+      </a>
     </div>
 
-    <div class="sources-group-label">LinkedIn</div>
+    <div class="sources-group-label">LinkedIn и соцсети</div>
     <div class="sources-grid">
       <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=Head%20of%20Marketing%20OR%20CMO&amp;location=Cyprus&amp;f_TPR=r2592000" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🇨🇾</span><span class="source-name">LI · Кипр · Head / CMO</span><span class="source-badge badge-cy">Past month</span></div>
@@ -1474,9 +1976,29 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">🌐</span><span class="source-name">LI · Head remote</span><span class="source-badge badge-best">Past week</span></div>
         <div class="source-desc">Remote · 7 дней. Акцент на СНГ-корни.</div>
       </a>
-      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Product%20Marketing%22%20OR%20%22Product%20Marketing%20Lead%22&amp;f_TPR=r2592000&amp;f_WT=2" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🧩</span><span class="source-name">LI · Product Marketing</span><span class="source-badge badge-good">PMM</span></div>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Product%20Marketing%22%20OR%20%22Product%20Marketing%20Lead%22%20OR%20%22PMM%20Lead%22&amp;f_TPR=r604800&amp;f_WT=2" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🧩</span><span class="source-name">LI · PMM / Product Marketing</span><span class="source-badge badge-good">PMM</span></div>
         <div class="source-desc">Head of PMM / PMM Lead remote.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Growth%20Lead%22%20OR%20%22Marketing%20Lead%22%20EdTech&amp;f_TPR=r604800&amp;f_WT=2" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📈</span><span class="source-name">LI · Growth Lead EdTech</span><span class="source-badge badge-best">акцент 1</span></div>
+        <div class="source-desc">Lead, не только CMO.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Events%22%20OR%20%22Head%20of%20Community%22%20OR%20%22Event%20Marketing%22%20OR%20%22Community%20Lead%22&amp;f_TPR=r2592000" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎤</span><span class="source-name">LI · Events / Community</span><span class="source-badge badge-best">акцент 2</span></div>
+        <div class="source-desc">Форумы, конференции, комьюнити-лиды.</div>
+      </a>
+      <a class="source-card" href="https://tenchat.ru/search?q=CMO%20Head%20of%20Marketing%20EdTech" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">💬</span><span class="source-name">TenChat</span><span class="source-badge badge-good">СНГ соцсеть</span></div>
+        <div class="source-desc">Вакансии и посты CMO / Head. Часто нет на LinkedIn.</div>
+      </a>
+      <a class="source-card" href="https://www.facebook.com/groups/cyprusjobs/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📘</span><span class="source-name">Facebook · Cyprus Jobs</span><span class="source-badge badge-cy">Кипр</span></div>
+        <div class="source-desc">Группы вакансий Кипра. Marketing / events.</div>
+      </a>
+      <a class="source-card" href="https://www.xing.com/jobs/search?keywords=Head%20of%20Marketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">✖️</span><span class="source-name">Xing</span><span class="source-badge badge-ok">EU</span></div>
+        <div class="source-desc">Только если релокация в EU. Не Кипр.</div>
       </a>
     </div>
 
@@ -1506,6 +2028,10 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">💼</span><span class="source-name">CWjobs Cyprus</span><span class="source-badge badge-ok">Кипр</span></div>
         <div class="source-desc">Ещё один локальный агрегатор.</div>
       </a>
+      <a class="source-card" href="https://cy.indeed.com/jobs?q=Head+of+Marketing+OR+CMO&amp;l=Cyprus" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🟦</span><span class="source-name">Indeed Cyprus</span><span class="source-badge badge-cy">Кипр</span></div>
+        <div class="source-desc">CMO / Head / Events на острове.</div>
+      </a>
     </div>
 
     <div class="sources-group-label">Карьеры компаний</div>
@@ -1530,6 +2056,10 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">📘</span><span class="source-name">EdTechJobs.io</span><span class="source-badge badge-best">спецборд</span></div>
         <div class="source-desc">Marketing / PMM / Head.</div>
       </a>
+      <a class="source-card" href="https://jobs.foxford.ru/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🦊</span><span class="source-name">Фоксфорд · карьера</span><span class="source-badge badge-best">EdTech</span></div>
+        <div class="source-desc">Карьерный сайт + TG @jobs_foxford.</div>
+      </a>
     </div>
 
     <div class="sources-group-label">Remote</div>
@@ -1549,6 +2079,14 @@ a { color: inherit; text-decoration: none; }
       <a class="source-card" href="https://remotive.com/remote-jobs/marketing" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🛸</span><span class="source-name">Remotive</span><span class="source-badge badge-good">remote</span></div>
         <div class="source-desc">Категория Marketing.</div>
+      </a>
+      <a class="source-card" href="https://remoteok.com/remote-marketing-jobs" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🆗</span><span class="source-name">Remote OK</span><span class="source-badge badge-good">remote</span></div>
+        <div class="source-desc">Marketing / Head / Community.</div>
+      </a>
+      <a class="source-card" href="https://www.welcometothejungle.com/en/jobs?query=head%20of%20marketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🌴</span><span class="source-name">Welcome to the Jungle</span><span class="source-badge badge-ok">EU</span></div>
+        <div class="source-desc">Head / PMM в EU. Смотреть remote.</div>
       </a>
     </div>
 
@@ -1574,6 +2112,50 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">💻</span><span class="source-name">@Remoteit</span><span class="source-badge badge-tg">TG</span></div>
         <div class="source-desc">Только remote digital.</div>
       </a>
+      <a class="source-card" href="https://t.me/edmarketclubjob" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎓</span><span class="source-name">@edmarketclubjob</span><span class="source-badge badge-tg">EdTech</span></div>
+        <div class="source-desc">Вакансии EdTech. Акцент 1.</div>
+      </a>
+      <a class="source-card" href="https://t.me/razoomjobs" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🌍</span><span class="source-name">@razoomjobs</span><span class="source-badge badge-tg">EdTech</span></div>
+        <div class="source-desc">EdTech, international, remote, релокация.</div>
+      </a>
+      <a class="source-card" href="https://t.me/jobs_foxford" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🦊</span><span class="source-name">@jobs_foxford</span><span class="source-badge badge-tg">EdTech</span></div>
+        <div class="source-desc">Карьера Фоксфорда.</div>
+      </a>
+      <a class="source-card" href="https://t.me/digital_jobster" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📣</span><span class="source-name">@digital_jobster</span><span class="source-badge badge-tg">TG</span></div>
+        <div class="source-desc">Маркетинг, PR, контент, digital.</div>
+      </a>
+      <a class="source-card" href="https://t.me/marketinghab" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📊</span><span class="source-name">@marketinghab</span><span class="source-badge badge-tg">TG</span></div>
+        <div class="source-desc">Маркетинг: вакансии и фриланс.</div>
+      </a>
+      <a class="source-card" href="https://t.me/marketing_jobs_ua" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🇺🇦</span><span class="source-name">@marketing_jobs_ua</span><span class="source-badge badge-tg">TG</span></div>
+        <div class="source-desc">Чистый маркетинг UA / remote.</div>
+      </a>
+    </div>
+
+    <div class="sources-group-label">Ивенты / комьюнити</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://reforum.online/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎤</span><span class="source-name">REFORUM</span><span class="source-badge badge-best">акцент 2</span></div>
+        <div class="source-desc">Форум. Смотреть карьеру и соседние ивент-юниты.</div>
+      </a>
+      <a class="source-card" href="https://ancor.ru/vacancy/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🏢</span><span class="source-name">ANCOR · вакансии</span><span class="source-badge badge-best">акцент 2</span></div>
+        <div class="source-desc">Юнит REFORUM. Маркетинг форумов / комьюнити.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=conference%20OR%20forum%20%22Head%20of%20Marketing%22%20OR%20CMO&amp;f_TPR=r2592000" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🗓️</span><span class="source-name">LI · forum / conference CMO</span><span class="source-badge badge-good">ивенты</span></div>
+        <div class="source-desc">CMO и Head в конференциях и форумах.</div>
+      </a>
+      <a class="source-card" href="https://hh.ru/search/vacancy?text=%D1%84%D0%BE%D1%80%D1%83%D0%BC+OR+%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D1%8F+AND+%28CMO+OR+%22Head+of+Marketing%22+OR+%22%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80+%D0%BF%D0%BE+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D1%83%22%29" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🟡</span><span class="source-name">hh.ru · форум / конференция</span><span class="source-badge badge-good">ивенты</span></div>
+        <div class="source-desc">Директор по маркетингу в ивент-бизнесе.</div>
+      </a>
     </div>
 
     <div class="sources-group-label">iGaming · в конце</div>
@@ -1595,13 +2177,15 @@ a { color: inherit; text-decoration: none; }
 
   <section class="section" id="algo">
     <h2 class="section-title">Алгоритм ежедневного поиска</h2>
-    <div class="algo-step"><span class="algo-num">1</span><strong>hh.ru.</strong> Сбросить город. CMO / Head of Marketing / директор по маркетингу. Отдельно: remote (не только Кипр) и cyprus.hh.ru. Сначала СНГ-корни.</div>
-    <div class="algo-step"><span class="algo-num">2</span><strong>LinkedIn Past week.</strong> Head / CMO / VP / Head of PMM. Сначала СНГ-корни, потом иностранные.</div>
-    <div class="algo-step"><span class="algo-num">3</span><strong>Кипр напрямую.</strong> Ergodotisi, Cyprus Work, Carierista, GRS, LearnWorlds, Welltech, XM.</div>
-    <div class="algo-step"><span class="algo-num">4</span><strong>Агрегаторы.</strong> Хабр Карьера, Djinni, getmatch, talent-move, hirehi, hirify, gdejob, finder.work.</div>
-    <div class="algo-step"><span class="algo-num">5</span><strong>Remote-борды и карьеры.</strong> Wellfound, Himalayas, WWR, Remotive. Novakid, EdTechJobs.io.</div>
-    <div class="algo-step"><span class="algo-num">6</span><strong>iGaming — в конце.</strong> InGameJob, RocketHunt, Talentin, cyprus.hh.ru iGaming.</div>
-    <div class="algo-step"><span class="algo-num">7</span><strong>Дубли и контакты.</strong> Компания уже есть → обновить статус. На карточке: Apply + HR. Если нет — явно «не найдены».</div>
+    <div class="algo-step"><span class="algo-num">1</span><strong>hh.ru.</strong> Город сброшен. CMO / Head / Growth Lead / PMM Lead / директор. Отдельно: EdTech, ивенты/комьюнити, solo-маркетолог, remote, cyprus.hh.ru. Агентства не выкидывать.</div>
+    <div class="algo-step"><span class="algo-num">2</span><strong>LinkedIn + соцсети.</strong> Past week: Head / CMO / PMM / Growth Lead / Events / Community. TenChat. Facebook Cyprus Jobs.</div>
+    <div class="algo-step"><span class="algo-num">3</span><strong>Кипр напрямую.</strong> Ergodotisi, Cyprus Work, Carierista, GRS, Indeed Cyprus, LearnWorlds, Welltech, XM.</div>
+    <div class="algo-step"><span class="algo-num">4</span><strong>Агрегаторы.</strong> Хабр, Djinni, getmatch, Superjob, Jooble, Otta, talent-move, hirehi.</div>
+    <div class="algo-step"><span class="algo-num">5</span><strong>EdTech.</strong> EdTechJobs.io, Фоксфорд, Novakid, Telegram @edmarketclubjob @razoomjobs.</div>
+    <div class="algo-step"><span class="algo-num">6</span><strong>Ивенты / комьюнити.</strong> REFORUM, ANCOR, Head of Events / Community. Форумы и конференции.</div>
+    <div class="algo-step"><span class="algo-num">7</span><strong>Telegram.</strong> Маркетинг + EdTech + remote + Кипр. Список выше.</div>
+    <div class="algo-step"><span class="algo-num">8</span><strong>iGaming — в конце.</strong> InGameJob, RocketHunt, Talentin.</div>
+    <div class="algo-step"><span class="algo-num">9</span><strong>Дубли и ссылки.</strong> Компания уже есть → обновить. На карточке: компания/продукт + вакансия. HR если есть.</div>
   </section>
 
 </div>
@@ -1617,7 +2201,7 @@ a { color: inherit; text-decoration: none; }
     <a href="#cyprus">Кипр</a>
     <a href="#head">Head / CMO</a>
     <a href="#lead">Lead</a>
-    <a href="#senior">Senior</a>
+    <a href="#senior">Senior / solo</a>
     <a href="#igaming">iGaming</a>
     <a href="#sources">Источники</a>
     <a href="#algo" class="sub">Алгоритм</a>
@@ -1641,7 +2225,22 @@ tocLinks.forEach((a, i) => {
 });
 const tocDots = [...dotsWrap.querySelectorAll('.toc-dot')];
 
-const state = { geo:'all', ind:'all', level:'all', origin:'all' };
+const state = { geo:'all', ind:'all', level:'all', origin:'all', type:'all', posted:'all' };
+
+function daysAgo(iso){
+  if (!iso) return 9999;
+  const d = new Date(iso + 'T12:00:00');
+  return Math.floor((Date.now() - d) / 86400000);
+}
+function postedOk(iso, bucket){
+  if (bucket === 'all') return true;
+  const days = daysAgo(iso);
+  if (bucket === '2d') return days <= 1;
+  if (bucket === '7d') return days <= 7;
+  if (bucket === '30d') return days <= 30;
+  if (bucket === 'older') return days > 30;
+  return true;
+}
 
 function applyFilters(){
   const cards = document.querySelectorAll('.card');
@@ -1652,7 +2251,9 @@ function applyFilters(){
       (state.geo    === 'all' || c.dataset.geo    === state.geo) &&
       (state.origin === 'all' || c.dataset.origin === state.origin) &&
       (state.ind    === 'all' || inds.includes(state.ind)) &&
-      (state.level  === 'all' || c.dataset.level  === state.level);
+      (state.level  === 'all' || c.dataset.level  === state.level) &&
+      (state.type   === 'all' || c.dataset.type   === state.type) &&
+      postedOk(c.dataset.posted, state.posted);
     c.classList.toggle('hidden', !ok);
     if (ok) total++;
   });
@@ -1677,6 +2278,9 @@ document.querySelectorAll('[data-f]').forEach(btn => {
 
 applyFilters();
 document.getElementById('m-all').textContent = document.querySelectorAll('.card').length;
+const srcN = document.querySelectorAll('#sources .source-card').length;
+const srcEl = document.getElementById('sources-count');
+if (srcEl) srcEl.textContent = srcN;
 
 const ids = tocLinks.map(a => a.getAttribute('href')).filter(h => h && h.startsWith('#')).map(h => h.slice(1));
 const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
