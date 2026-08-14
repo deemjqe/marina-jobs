@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вакансии · Марина</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white: #ffffff;
+  --bg: #ffffff;
+  --text: #37352f;
+  --text2: #5a574e;
+  --muted: #787774;
+  --border: #e9e9e7;
+  --pink: #f3d5dc;
+  --pink2: #e8b4c0;
+  --pink3: #c45c7a;
+  --pink-deep: #b03a5c;
+  --pink-bg: #fdf2f5;
+  --blue: #2383e2;
+  --blue-bg: #eef6fd;
+  --green: #0f7b6c;
+  --green-bg: #e8f5f2;
+  --orange: #c1440e;
+  --orange-bg: #fbeee8;
+  --purple: #6940a5;
+  --purple-bg: #f3eef9;
+  --red: #c0392b;
+  --red-bg: #fdf1f0;
+  --shadow-sm: 0 1px 2px rgba(55,53,47,.06);
+  --shadow: 0 8px 24px rgba(55,53,47,.08), 0 2px 6px rgba(55,53,47,.04);
+  --shadow-lg: 0 16px 40px rgba(55,53,47,.1);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --toc-w: 268px;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ── Banner ── */
+.banner {
+  position: relative;
+  min-height: 168px;
+  background-color: #f4d6dd;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='84' height='72' viewBox='0 0 84 72'><g fill='none' stroke='%23e4b7c3' stroke-width='1.15'><path d='M21 2l14 8v16l-14 8-14-8V10z'/><path d='M49 2l14 8v16l-14 8-14-8V10z'/><path d='M7 26l14 8v16l-14 8-14-8V34z'/><path d='M35 26l14 8v16l-14 8-14-8V34z'/><path d='M63 26l14 8v16l-14 8-14-8V34z'/><path d='M21 50l14 8v16l-14 8-14-8V58z'/><path d='M49 50l14 8v16l-14 8-14-8V58z'/></g><g fill='%23edc5d0' fill-opacity='.45'><path d='M35 26l14 8v16l-14 8-14-8V34z'/><path d='M63 2l14 8v16l-14 8-14-8V10z'/></g></svg>");
+  background-size: 84px 72px;
+  border-bottom: 1px solid #ead0d6;
+}
+.banner-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 32px 0;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 168px;
+}
+.exp-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 20px 14px;
+  width: 250px;
+  box-shadow: var(--shadow);
+  margin-bottom: -28px;
+  position: relative;
+  z-index: 2;
+}
+.exp-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -.2px;
+}
+.exp-card ul { padding-left: 18px; color: var(--text2); font-size: 13.5px; line-height: 1.7; }
+
+/* ── Hero ── */
+.hero { background: #fff; }
+.hero-inner {
+  max-width: none;
+  margin: 0;
+  padding: 36px 0 8px;
+}
+.avatar {
+  width: 88px; height: 88px;
+  border-radius: 10px;
+  margin-top: -72px;
+  margin-bottom: 18px;
+  background: linear-gradient(145deg, #f4d6dd 0%, #e8b4c0 100%);
+  border: 3px solid #fff;
+  box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; font-weight: 800; color: #fff;
+  letter-spacing: -.5px;
+  position: relative; z-index: 3;
+}
+.hero-name {
+  font-size: 40px; font-weight: 800;
+  letter-spacing: -1.2px; line-height: 1.1;
+  color: var(--text);
+}
+.hero-sub {
+  font-size: 18px; font-weight: 600;
+  margin-top: 10px; color: var(--text);
+}
+.hero-links {
+  margin-top: 10px;
+  font-size: 13.5px; color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 8px 0;
+}
+.hero-links span { color: #cfcbc4; margin: 0 8px; }
+.hero-links a { color: var(--muted); }
+.hero-links a:hover { color: var(--blue); }
+
+.quote {
+  margin: 22px 0 0;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid #e3e2e0;
+  color: var(--text2);
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+.quote strong { color: var(--text); font-weight: 600; }
+
+.live-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 20px;
+  background: var(--pink-bg);
+  border: 1px solid #f0c9d3;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px; color: var(--pink-deep); font-weight: 500;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pink3); animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+/* ── TOC ── */
+.toc-wrap {
+  position: sticky;
+  top: 24px;
+  padding-top: 28px;
+  width: var(--toc-w);
+}
+.toc {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(55,53,47,.07), 0 1px 3px rgba(55,53,47,.04);
+  padding: 14px 10px;
+}
+.toc a {
+  display: block;
+  font-size: 13.5px;
+  color: var(--muted);
+  padding: 7px 12px;
+  border-radius: 8px;
+  line-height: 1.35;
+  transition: background .15s, color .15s;
+}
+.toc a:hover { background: #f7f6f3; color: var(--text); }
+.toc a.active {
+  background: #f1f1ef;
+  color: var(--blue);
+  font-weight: 500;
+}
+.toc a.sub { padding-left: 26px; font-size: 13px; color: #9b9a97; }
+.toc a.sub.active { color: var(--blue); background: #f1f1ef; }
+
+/* ── Layout ── */
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--toc-w);
+  gap: 36px;
+  align-items: start;
+}
+.col { min-width: 0; }
+.page {
+  max-width: none;
+  margin: 0;
+  padding: 8px 0 0;
+}
+.main { min-width: 0; }
+
+/* ── Filters ── */
+.filters {
+  display: flex; flex-direction: column; gap: 8px;
+  margin: 28px 0 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+}
+.filter-row { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.filter-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--muted); width: 72px; flex-shrink: 0;
+}
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 20px; padding: 4px 12px;
+  font-size: 12.5px; color: var(--text2); font-weight: 500;
+  cursor: pointer; transition: all .15s; user-select: none;
+}
+.pill:hover { border-color: var(--pink3); color: var(--pink-deep); }
+.pill.active { background: var(--text); border-color: var(--text); color: #fff; }
+.pill-cnt {
+  background: rgba(255,255,255,.2); border-radius: 10px;
+  padding: 0 6px; font-size: 11px; font-weight: 700; min-width: 18px; text-align: center;
+}
+.pill:not(.active) .pill-cnt { background: #f1f1ef; color: var(--muted); }
+
+.results-bar { font-size: 13px; color: var(--muted); margin: 18px 0 8px; }
+.results-bar strong { color: var(--text); }
+
+/* ── Review ── */
+.section { margin: 36px 0 48px; scroll-margin-top: 88px; }
+.section.hidden { display: none; }
+.section-title {
+  font-size: 24px; font-weight: 800; letter-spacing: -.5px;
+  margin-bottom: 6px;
+}
+.section-sub { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.review-card {
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.review-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.review-card p, .review-card li { font-size: 13.5px; color: var(--text2); line-height: 1.6; }
+.review-card ul { padding-left: 16px; }
+.review-card.yes { background: #f4fbf8; border-color: #cde8df; }
+.review-card.no { background: #fdf8f6; border-color: #f0d9d0; }
+.review-card.warn { background: #fffaf2; border-color: #f3e2c4; }
+
+.score { margin: 10px 0 14px; }
+.score-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+.score-name { width: 210px; flex-shrink: 0; color: var(--text2); }
+.score-bar {
+  flex: 1; height: 8px; background: #f1f1ef; border-radius: 8px; overflow: hidden;
+}
+.score-fill { height: 100%; border-radius: 8px; }
+.score-n { width: 36px; font-weight: 700; font-size: 12px; color: var(--muted); }
+
+.tip {
+  background: var(--pink-bg);
+  border: 1px solid #f0c9d3;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 13.5px; color: #7a3a4e; line-height: 1.65;
+  margin-bottom: 20px;
+}
+.tip strong { color: #5c2436; }
+
+/* ── Cards ── */
+.grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 18px;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--card-accent, var(--pink3));
+}
+.card:hover { box-shadow: var(--shadow); transform: translateY(-1px); border-color: #e4d0d5; }
+.card.hidden { display: none; }
+.card-top { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.logo {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; background: var(--pink-bg); flex-shrink: 0;
+}
+.card-title { font-size: 16px; font-weight: 700; line-height: 1.3; }
+.card-company { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.match {
+  position: absolute; top: 16px; right: 18px;
+  font-size: 12px; font-weight: 700; color: var(--green);
+}
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.tag {
+  border-radius: 6px; padding: 2px 9px;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+}
+.tag-remote { background: var(--green-bg); color: var(--green); }
+.tag-hybrid, .tag-office { background: var(--orange-bg); color: var(--orange); }
+.tag-level-h { background: var(--pink-bg); color: var(--pink-deep); }
+.tag-level-l { background: var(--purple-bg); color: var(--purple); }
+.tag-level-s { background: var(--blue-bg); color: var(--blue); }
+.tag-ind { background: #f7f6f3; color: var(--text2); }
+.tag-warn { background: var(--orange-bg); color: var(--orange); }
+.tag-geo { background: var(--pink-bg); color: var(--pink-deep); }
+.location { font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
+.desc { font-size: 13.5px; color: var(--text2); line-height: 1.65; margin-bottom: 12px; }
+.desc strong { color: var(--text); }
+.reqs-label, .contacts-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--muted); margin-bottom: 6px;
+}
+.req-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+.req-tag {
+  background: #f7f6f3; border: 1px solid var(--border);
+  border-radius: 5px; padding: 2px 8px; font-size: 11px; color: var(--text2);
+}
+.req-tag.m { background: var(--pink-bg); border-color: #f0c9d3; color: var(--pink-deep); }
+.contacts {
+  background: #fafafa; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 12px; margin-bottom: 12px;
+}
+.contact-row { font-size: 12.5px; color: var(--text2); line-height: 1.55; margin-top: 2px; }
+.contact-row a { color: var(--blue); font-weight: 500; }
+.contact-row a:hover { text-decoration: underline; }
+.contact-muted { color: var(--muted); font-style: italic; }
+.card-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 12px; border-top: 1px solid #f1f1ef; gap: 10px;
+}
+.post-date { font-size: 12px; color: var(--muted); }
+.btn {
+  display: inline-flex; align-items: center;
+  background: var(--pink3); color: #fff;
+  border-radius: 10px; padding: 8px 16px;
+  font-size: 13px; font-weight: 600;
+  transition: opacity .15s, transform .1s;
+}
+.btn:hover { opacity: .88; transform: scale(1.02); }
+
+/* ── Sources ── */
+.sources-group-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted); margin: 22px 0 10px;
+}
+.sources-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;
+}
+.source-card {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 14px 16px; background: #fafafa;
+  border-radius: 12px; border: 1px solid var(--border);
+  transition: border-color .15s, box-shadow .15s;
+}
+.source-card:hover { border-color: var(--pink2); box-shadow: 0 2px 10px rgba(196,92,122,.1); }
+.source-card-top { display: flex; align-items: center; gap: 8px; }
+.source-emoji { font-size: 16px; }
+.source-name { font-size: 13px; font-weight: 600; }
+.source-badge {
+  margin-left: auto; font-size: 10px; font-weight: 600;
+  padding: 2px 7px; border-radius: 20px; white-space: nowrap;
+}
+.badge-best { background: #dcfce7; color: #15803d; }
+.badge-good { background: #dbeafe; color: #1d4ed8; }
+.badge-tg { background: #ede9fe; color: #6d28d9; }
+.badge-ok { background: #f3f4f6; color: #6b7280; }
+.badge-cy { background: var(--pink-bg); color: var(--pink-deep); }
+.source-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+.algo-step {
+  padding: 12px 0; border-bottom: 1px solid #f1f1ef;
+  font-size: 13.5px; color: var(--text2); line-height: 1.65;
+}
+.algo-step:last-child { border-bottom: none; }
+.algo-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--pink-bg); color: var(--pink-deep);
+  font-size: 12px; font-weight: 700; margin-right: 8px;
+}
+
+.no-results { display: none; text-align: center; padding: 64px 20px; color: var(--muted); }
+.no-results.show { display: block; }
+
+@media (max-width: 1100px) {
+  .shell { grid-template-columns: 1fr; }
+  .toc-wrap { display: none; }
+}
+@media (max-width: 720px) {
+  .banner-inner { justify-content: flex-start; padding-bottom: 20px; }
+  .exp-card { margin-bottom: 0; }
+  .avatar { margin-top: 18px; }
+  .hero-name { font-size: 32px; }
+  .review-grid { grid-template-columns: 1fr; }
+  .score-name { width: 140px; }
+}
+</style>
+</head>
+<body>
+
+<div class="banner" id="top">
+  <div class="banner-inner">
+    <div class="exp-card">
+      <h4>Experience</h4>
+      <ul>
+        <li>Product marketing</li>
+        <li>Growth marketing strategy</li>
+        <li>UX-UI product design</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+<div class="col">
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="avatar">M</div>
+      <div class="hero-name">Марина</div>
+      <div class="hero-sub">CMO | Product Marketing | EdTech | B2C</div>
+      <div class="hero-links">
+        Кипр
+        <span>|</span>
+        6+ лет CMO
+        <span>|</span>
+        English B1 → бизнес-курс
+        <span>|</span>
+        Команда до 11 человек
+      </div>
+      <div class="quote">
+        Продуктовый маркетолог, который выводит B2C-продукты на рынок и отвечает за выручку. Сильна в запусках с нуля, поиске Product Market Fit, маркетинге 360° и управлении продажами. Не «просто performance» и не «просто бренд» — связка стратегия → бренд → acquisition → retention → отдел продаж.
+      </div>
+      <div class="live-badge">
+        <div class="dot"></div>
+        Обновлено <span id="live-date"></span> · Кипр → remote → остальное · EdTech first
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+<div class="main">
+
+  <div class="filters">
+    <div class="filter-row">
+      <span class="filter-label">Гео</span>
+      <button class="pill active" data-f="geo" data-v="all">Все <span class="pill-cnt" id="m-all">0</span></button>
+      <button class="pill" data-f="geo" data-v="cyprus">🇨🇾 Кипр</button>
+      <button class="pill" data-f="geo" data-v="remote">🌐 Remote</button>
+      <button class="pill" data-f="geo" data-v="eu">🇪🇺 EU / другое</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Сфера</span>
+      <button class="pill active" data-f="ind" data-v="all">Все</button>
+      <button class="pill" data-f="ind" data-v="edtech">📚 EdTech</button>
+      <button class="pill" data-f="ind" data-v="health">💊 Health / Wellness</button>
+      <button class="pill" data-f="ind" data-v="events">🎤 Events / Media</button>
+      <button class="pill" data-f="ind" data-v="fintech">💹 Fintech</button>
+      <button class="pill" data-f="ind" data-v="saas">☁️ SaaS</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Уровень</span>
+      <button class="pill active" data-f="level" data-v="all">Все</button>
+      <button class="pill" data-f="level" data-v="head">Head / CMO / VP</button>
+      <button class="pill" data-f="level" data-v="lead">Lead</button>
+      <button class="pill" data-f="level" data-v="sr">Senior</button>
+    </div>
+  </div>
+
+  <div class="results-bar">Найдено вакансий: <strong id="total">0</strong></div>
+
+  <div class="tip">
+    <strong>14 августа 2026.</strong> На Кипре живой CMO/Head в EdTech — это в первую очередь <strong>LearnWorlds</strong> (Limassol). Остальной кипрский рынок Head — fintech, events, wellness-приложения. iGaming / casino не берём. На каждой карточке — Apply и контакты HR / hiring, если они есть в открытом доступе.
+  </div>
+
+  <!-- ════ REVIEW ════ -->
+  <section class="section" id="review">
+    <h2 class="section-title">Куда искать</h2>
+    <p class="section-sub">Разбор профиля по резюме, кейсам и LinkedIn — без воды</p>
+
+    <div class="review-grid">
+      <div class="review-card yes">
+        <h3>Брать в первую очередь</h3>
+        <ul>
+          <li><strong>CMO / Head of Marketing / Head of Product Marketing</strong> в B2C EdTech</li>
+          <li>Карьерные платформы, онлайн-курсы, LMS / course SaaS, kids EdTech</li>
+          <li>Роли «маркетинг + продажи» (CSMO) — это редкая сильная карта</li>
+          <li>0→1 и early-scale: PMF, запуски, первая команда</li>
+        </ul>
+      </div>
+      <div class="review-card no">
+        <h3>Не основной трек</h3>
+        <ul>
+          <li>Чистый Head of UA / Paid Social без продукта — слабее, чем 360°</li>
+          <li>Продажи без маркетинга (BDM / AE) — ниже потолка</li>
+          <li>Enterprise B2B PLG на native English (пока B1)</li>
+          <li>iGaming / casino / серый affiliate</li>
+        </ul>
+      </div>
+      <div class="review-card">
+        <h3>Почему маркетинг, а не «просто продажи»</h3>
+        <p>Продажи она уже делает внутри CMO-роли: собрала Growth sales, C1 9%→20%, средний чек ×2,5, AI-агенты в сделках. Это усиливает маркетинг, а не заменяет его. Искать <strong>коммерческого CMO</strong>, а не квоту в отделе продаж.</p>
+      </div>
+      <div class="review-card warn">
+        <h3>Главный фильтр сейчас</h3>
+        <p><strong>English B1</strong> закрывает часть международных VP на Кипре. Приоритет: русскоязычные / CIS-команды в Limassol и remote EdTech, где русский — рабочий язык. LearnWorlds — топ по продукту, но английский нужно честно проговорить.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2 class="section-title">Компетенции</h2>
+    <p class="section-sub">Насколько сильны зоны — по кейсам Future Hub, REFORUM, Careerum, Learme, Атланты</p>
+
+    <div class="score">
+      <div class="score-row"><span class="score-name">Product Marketing / GTM / PMF</span><div class="score-bar"><div class="score-fill" style="width:95%;background:#0f7b6c"></div></div><span class="score-n">9.5</span></div>
+      <div class="score-row"><span class="score-name">EdTech B2C запуски</span><div class="score-bar"><div class="score-fill" style="width:95%;background:#0f7b6c"></div></div><span class="score-n">9.5</span></div>
+      <div class="score-row"><span class="score-name">Маркетинг 360° (бренд → CRM)</span><div class="score-bar"><div class="score-fill" style="width:92%;background:#0f7b6c"></div></div><span class="score-n">9.2</span></div>
+      <div class="score-row"><span class="score-name">People management</span><div class="score-bar"><div class="score-fill" style="width:90%;background:#0f7b6c"></div></div><span class="score-n">9.0</span></div>
+      <div class="score-row"><span class="score-name">Продажи + воронки + CRM</span><div class="score-bar"><div class="score-fill" style="width:88%;background:#0f7b6c"></div></div><span class="score-n">8.8</span></div>
+      <div class="score-row"><span class="score-name">Контент / PR / SEO / медиа</span><div class="score-bar"><div class="score-fill" style="width:86%;background:#2383e2"></div></div><span class="score-n">8.6</span></div>
+      <div class="score-row"><span class="score-name">Продуктовый дизайн / бренд</span><div class="score-bar"><div class="score-fill" style="width:84%;background:#2383e2"></div></div><span class="score-n">8.4</span></div>
+      <div class="score-row"><span class="score-name">AI в маркетинге и продажах</span><div class="score-bar"><div class="score-fill" style="width:80%;background:#2383e2"></div></div><span class="score-n">8.0</span></div>
+      <div class="score-row"><span class="score-name">Performance (управление, не байинг)</span><div class="score-bar"><div class="score-fill" style="width:72%;background:#c1440e"></div></div><span class="score-n">7.2</span></div>
+      <div class="score-row"><span class="score-name">Mobile UA / app growth</span><div class="score-bar"><div class="score-fill" style="width:58%;background:#c1440e"></div></div><span class="score-n">5.8</span></div>
+      <div class="score-row"><span class="score-name">B2B SaaS PLG / enterprise demand</span><div class="score-bar"><div class="score-fill" style="width:55%;background:#c1440e"></div></div><span class="score-n">5.5</span></div>
+      <div class="score-row"><span class="score-name">English (сейчас B1)</span><div class="score-bar"><div class="score-fill" style="width:40%;background:#c0392b"></div></div><span class="score-n">4.0</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="geo">
+    <h2 class="section-title">География</h2>
+    <div class="review-grid">
+      <div class="review-card yes">
+        <h3>1. Кипр</h3>
+        <p>LearnWorlds, CIS-команды в Limassol (Welltech и соседние B2C-приложения), event/media группы через GRS. Офис / hybrid в Лимасоле — плюс, remote с Кипра — норма.</p>
+      </div>
+      <div class="review-card">
+        <h3>2. Remote</h3>
+        <p>EdTech EU / global, где русский или смешанный язык. Novakid, Jurafuchs, course SaaS. Часовой пояс GMT+2/+3 совпадает.</p>
+      </div>
+      <div class="review-card">
+        <h3>3. Другие страны</h3>
+        <p>Только если remote-friendly или пакет релокации. US-only и native-English VP — позже, параллельно с английским.</p>
+      </div>
+      <div class="review-card warn">
+        <h3>Senior — редкие случаи</h3>
+        <p>Только если продукт молодой и маркетолог по сути один: стратегия + руки. Не Senior IC в большой корпорации.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CYPRUS ════ -->
+  <section class="section" id="cyprus">
+    <h2 class="section-title">Кипр</h2>
+    <p class="section-sub">Компании с офисом или хабом на Кипре · приоритет №1</p>
+    <div class="grid">
+
+      <div class="card" data-geo="cyprus" data-ind="edtech saas" data-level="head" data-loc="remote" style="--card-accent:#c45c7a">
+        <div class="match">94%</div>
+        <div class="card-top">
+          <div class="logo">🎓</div>
+          <div class="card-meta">
+            <div class="card-title">VP of Marketing — Growth &amp; Demand Generation</div>
+            <div class="card-company">LearnWorlds · LMS / course SaaS · HQ Limassol</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-geo">🇨🇾 Limassol / Athens / Remote EMEA</span>
+          <span class="tag tag-level-h">VP / Head</span>
+          <span class="tag tag-ind">EdTech · B2B SaaS · PLG</span>
+          <span class="tag tag-warn">⚠️ English C-level</span>
+        </div>
+        <div class="location">📍 Кипр / Греция / remote · отчёт CMO Dario Derna · команда demand gen, content, lifecycle, paid, ops</div>
+        <div class="desc">Единственный крупный EdTech с HQ на Кипре. Нужен коммерческий маркетинг-лид: pipeline, PLG + sales-assisted, AI в процессах. <strong>Продукт — почти идеальный мэтч</strong> (Learme / Future Hub). Разрыв: B2B SaaS на английском и роль VP под уже нанятым CMO, не «первый CMO».</div>
+        <div class="reqs-label">Ключевые требования</div>
+        <div class="req-tags">
+          <span class="req-tag m">B2B SaaS demand gen</span>
+          <span class="req-tag m">PLG + sales-assisted</span>
+          <span class="req-tag m">AI in marketing ops</span>
+          <span class="req-tag">EdTech — nice to have</span>
+        </div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Apply: <a href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank">Workable</a> · <a href="https://www.learnworlds.com/job/vp-of-marketing-growth-demand-generation-remote-emea/" target="_blank">JD на сайте</a></div>
+          <div class="contact-row">👤 Hiring: <a href="https://www.linkedin.com/in/constantinos-simaioforidis" target="_blank">Constantinos Simaioforidis</a> (ведёт поиск, пост в LinkedIn)</div>
+          <div class="contact-row">👤 CMO: <a href="https://www.linkedin.com/in/darioderna" target="_blank">Dario Derna</a> · CEO: <a href="https://www.linkedin.com/in/panossiozos" target="_blank">Panos Siozos</a></div>
+          <div class="contact-row">📧 Press / brand: <a href="mailto:press@learnworlds.com">press@learnworlds.com</a> (Andreea Constantin, Head of Brand)</div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 Активна · авг 2026</span>
+          <a href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="cyprus" data-ind="health" data-level="head" data-loc="remote" style="--card-accent:#0f7b6c">
+        <div class="match">74%</div>
+        <div class="card-top">
+          <div class="logo">💪</div>
+          <div class="card-meta">
+            <div class="card-title">Head of Growth — Paid Social</div>
+            <div class="card-company">Welltech · Muscle Booster / Yoga-Go / WalkFit · хаб Limassol</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-geo">🇨🇾 Кипр / 🇺🇦 Украина · Remote</span>
+          <span class="tag tag-level-h">Head</span>
+          <span class="tag tag-ind">Health · B2C apps</span>
+          <span class="tag tag-warn">⚠️ сильный UA-уклон</span>
+        </div>
+        <div class="location">📍 Cyprus / Ukraine · remote · партнёр CMO · creative + UA команды</div>
+        <div class="desc">CIS-friendly компания на Кипре, B2C subscription. Роль ближе к Head of UA/Paid Social, чем к CMO 360°. Имеет смысл, если готовность вести performance-команду и расти в сторону полного маркетинга. Не EdTech.</div>
+        <div class="reqs-label">Ключевые требования</div>
+        <div class="req-tags">
+          <span class="req-tag m">5+ лет performance teams B2C</span>
+          <span class="req-tag m">UAM + creatives</span>
+          <span class="req-tag">Mobile-first</span>
+          <span class="req-tag">10x growth stories</span>
+        </div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Apply: <a href="https://jobs.ashbyhq.com/welltech/23d73643-98c7-4dd0-b5d5-2c2130f183af" target="_blank">Ashby · Head of Growth</a></div>
+          <div class="contact-row">💼 Карьеры: <a href="https://jobs.ashbyhq.com/welltech" target="_blank">jobs.ashbyhq.com/welltech</a> · <a href="https://welltech.com/" target="_blank">welltech.com</a></div>
+          <div class="contact-row">👤 Процесс: Recruiter call → Hiring Manager → skills assessment → team</div>
+          <div class="contact-row contact-muted">Имя CMO / рекрутера в постинге не указано — писать после Apply в Ashby.</div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 Активна · авг 2026</span>
+          <a href="https://jobs.ashbyhq.com/welltech/23d73643-98c7-4dd0-b5d5-2c2130f183af/application" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="cyprus" data-ind="events fintech" data-level="head" data-loc="office" style="--card-accent:#6940a5">
+        <div class="match">70%</div>
+        <div class="card-top">
+          <div class="logo">🎤</div>
+          <div class="card-meta">
+            <div class="card-title">Head of Growth &amp; Strategy — Events</div>
+            <div class="card-company">GRS · клиент: международный fintech media / events, Limassol</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-office">🏙️ Limassol office</span>
+          <span class="tag tag-level-h">Head</span>
+          <span class="tag tag-ind">Events · Fintech media</span>
+        </div>
+        <div class="location">📍 Limassol · рядом с COO Events · портфель международных ивент-брендов</div>
+        <div class="desc">Не EdTech, но сильный мэтч по <strong>ивент-маркетингу</strong> (REFORUM: 70K участников, 10 млн просмотров). Рост портфеля брендов, партнёрства, sponsorship. 8+ лет fintech/events. Английский обязателен.</div>
+        <div class="reqs-label">Ключевые требования</div>
+        <div class="req-tags">
+          <span class="req-tag m">8+ лет fintech / events / growth</span>
+          <span class="req-tag m">Стратегия портфеля брендов</span>
+          <span class="req-tag">Partnerships / sponsorship</span>
+        </div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">📧 Recruiter: <a href="mailto:hayley@grsrecruitment.com?subject=Ref%2011194%20Head%20of%20Growth">hayley@grsrecruitment.com</a> · Ref <strong>11194</strong></div>
+          <div class="contact-row">👤 Hayley Buckle — Director of Recruitment, GRS. LinkedIn: искать «Hayley Buckle GRS»</div>
+          <div class="contact-row">🌐 JD: <a href="https://jobs.grsrecruitment.com/job/head-of-growth-and-strategy-11194.aspx" target="_blank">GRS listing</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 опубликовано 28 июля 2026</span>
+          <a href="mailto:hayley@grsrecruitment.com?subject=Ref%2011194%20Head%20of%20Growth" class="btn">Написать Hayley →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="cyprus" data-ind="fintech" data-level="head" data-loc="remote" style="--card-accent:#c1440e">
+        <div class="match">62%</div>
+        <div class="card-top">
+          <div class="logo">📈</div>
+          <div class="card-meta">
+            <div class="card-title">Head of Marketing — founding team</div>
+            <div class="card-company">SkillDock · prop trading / fintech · Cyprus / Europe remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-remote">🌐 Remote Cyprus / Europe</span>
+          <span class="tag tag-level-h">Head · первый маркетолог</span>
+          <span class="tag tag-ind">Fintech</span>
+          <span class="tag tag-warn">⚠️ €48–72K · не EdTech</span>
+        </div>
+        <div class="location">📍 Remote-first · founding team · полный маркетинг с нуля</div>
+        <div class="desc">Редкий случай «маркетолог один на молодом продукте»: GTM, paid, контент, комьюнити. Формат роли — её, вертикаль — нет. Вилка для Head низкая. Брать только если нужен быстрый вход на Кипре и готовность к fintech.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Listing: <a href="https://skilldock.lovestoblog.com/job/head-of-marketing-forex-prop-trading" target="_blank">SkillDock posting</a> · 26 июля 2026</div>
+          <div class="contact-row contact-muted">Конечный работодатель скрыт рекрутером. HR email в постинге нет — форма на listing.</div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 26 июля 2026</span>
+          <a href="https://skilldock.lovestoblog.com/job/head-of-marketing-forex-prop-trading" target="_blank" class="btn">Открыть →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ HEAD ════ -->
+  <section class="section" id="head">
+    <h2 class="section-title">Head / CMO · remote</h2>
+    <p class="section-sub">Вне Кипра · EdTech в приоритете</p>
+    <div class="grid">
+
+      <div class="card" data-geo="remote" data-ind="edtech" data-level="head" data-loc="remote" style="--card-accent:#2383e2">
+        <div class="match">93%</div>
+        <div class="card-top">
+          <div class="logo">⚖️</div>
+          <div class="card-meta">
+            <div class="card-title">Head of Marketing (m/w/d) · EdTech &amp; Legal Tech</div>
+            <div class="card-company">Jurafuchs · Legal Education &amp; Legal AI · Berlin, 100% remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-remote">🌐 100% remote · EU retreats 2× год</span>
+          <span class="tag tag-level-h">Head · вся функция</span>
+          <span class="tag tag-ind">EdTech · Legal Tech</span>
+          <span class="tag tag-warn">⚠️ немецкий в JD</span>
+        </div>
+        <div class="location">📍 Remote · команда до 4 reports · основатель отдаёт маркетинг</div>
+        <div class="desc">Почти эталон: вся функция, бюджет, каналы, продукт↔growth, гипотезы, CAC/retention. Legal education, не «ещё одни курсы по маркетингу». <strong>Проверить язык:</strong> JD на немецком, продукт для Jurastudium — без немецкого, скорее всего, нет.</div>
+        <div class="reqs-label">Ключевые требования</div>
+        <div class="req-tags">
+          <span class="req-tag m">2+ года в руководстве маркетингом</span>
+          <span class="req-tag m">Performance + organic + brand</span>
+          <span class="req-tag m">Стратегия и руки</span>
+          <span class="req-tag">AI-first</span>
+        </div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Apply: <a href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank">Personio · Open positions</a></div>
+          <div class="contact-row">👤 CEO / hiring: Christian Leupold-Wendling (Geschäftsführung) · писать через Personio или company LinkedIn</div>
+          <div class="contact-row">📧 <a href="mailto:support@jurafuchs.de">support@jurafuchs.de</a> · компания: <a href="https://www.linkedin.com/company/18467476" target="_blank">LinkedIn Jurafuchs</a></div>
+          <div class="contact-row">📄 JD: <a href="https://omr.com/en/jobs-hr/jobs/head-of-marketing-m-w-d-edtech-legal-tech-100-remote-jurafuchs" target="_blank">OMR</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 Активна · авг 2026</span>
+          <a href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ LEAD ════ -->
+  <section class="section" id="lead">
+    <h2 class="section-title">Lead</h2>
+    <p class="section-sub">Сильные EdTech-команды, где можно взять воронку / CRM / growth, не C-level</p>
+    <div class="grid">
+
+      <div class="card" data-geo="remote" data-ind="edtech" data-level="lead" data-loc="remote" style="--card-accent:#c45c7a">
+        <div class="match">86%</div>
+        <div class="card-top">
+          <div class="logo">🧒</div>
+          <div class="card-meta">
+            <div class="card-title">Senior Growth Product Manager · Activation &amp; Funnel</div>
+            <div class="card-company">Novakid · kids English EdTech · 1M+ студентов · remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-remote">🌐 Remote · GMT+3</span>
+          <span class="tag tag-level-l">Lead / Senior PM Growth</span>
+          <span class="tag tag-ind">EdTech · B2C subscription</span>
+        </div>
+        <div class="location">📍 Remote (в вакансии Belgrade as hub) · trial → paywall → CRM · не чистый маркетинг, а growth product</div>
+        <div class="desc">Воронка, trial, прайсинг, CRM-контроль, aha-moment — прям её Future Hub / Careerum. Минус: это Growth PM, не Head of Marketing; нужен английский confident. CIS-компания, remote-first.</div>
+        <div class="reqs-label">Ключевые требования</div>
+        <div class="req-tags">
+          <span class="req-tag m">5+ лет Growth / CRO / activation</span>
+          <span class="req-tag m">Воронки и монетизация</span>
+          <span class="req-tag">Excellent English</span>
+          <span class="req-tag">Jira / Slack</span>
+        </div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Apply: <a href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank">hr.novakidschool.com</a></div>
+          <div class="contact-row">💼 Все роли: <a href="https://hr.novakidschool.com/" target="_blank">Novakid careers</a></div>
+          <div class="contact-row contact-muted">Публичного HR email нет — форма Recruitee. После отклика — писать CMO Novakid в LinkedIn.</div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 Активна · авг 2026</span>
+          <a href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="remote" data-ind="health" data-level="lead" data-loc="remote" style="--card-accent:#0f7b6c">
+        <div class="match">81%</div>
+        <div class="card-top">
+          <div class="logo">✉️</div>
+          <div class="card-meta">
+            <div class="card-title">CRM Manager</div>
+            <div class="card-company">Welltech · Limassol hub · Poland / Ukraine remote</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-remote">🌐 Remote · Poland / Ukraine</span>
+          <span class="tag tag-level-l">Lead / Manager</span>
+          <span class="tag tag-ind">Health · CRM</span>
+          <span class="tag tag-warn">⚠️ ниже CMO, но зона 70% выручки</span>
+        </div>
+        <div class="location">📍 Remote · CRM у Welltech — ядро retention B2C apps</div>
+        <div class="desc">На Future Hub CRM дал 70% выручки. Роль уже Lead/Manager, не Head. Имеет смысл как вход в кипрский Welltech, если Head of Growth слишком UA. Гео в постинге — Poland/Ukraine; Кипр как хаб компании всё равно рядом.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Карьеры: <a href="https://jobs.ashbyhq.com/welltech" target="_blank">Ashby · Welltech</a> → CRM Manager</div>
+          <div class="contact-row contact-muted">Прямой email в списке вакансий не опубликован.</div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 Активна · авг 2026</span>
+          <a href="https://jobs.ashbyhq.com/welltech" target="_blank" class="btn">Открыть Ashby →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ SENIOR ════ -->
+  <section class="section" id="senior">
+    <h2 class="section-title">Senior · точечно</h2>
+    <p class="section-sub">Только EdTech / молодой продукт / сильная зона (инсайты, первый маркетолог)</p>
+    <div class="grid">
+
+      <div class="card" data-geo="remote" data-ind="edtech" data-level="sr" data-loc="remote" style="--card-accent:#2383e2">
+        <div class="match">78%</div>
+        <div class="card-top">
+          <div class="logo">🔎</div>
+          <div class="card-meta">
+            <div class="card-title">Senior Consumer &amp; Marketing Insights Manager</div>
+            <div class="card-company">Novakid · remote · Research Council со спонсорством CMO</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-remote">🌐 Remote</span>
+          <span class="tag tag-level-s">Senior</span>
+          <span class="tag tag-ind">EdTech · Insights</span>
+        </div>
+        <div class="location">📍 Remote · кастдевы, панели, рекомендации C-level · не владелец P&amp;L</div>
+        <div class="desc">Сильная зона: кастдевы, ЦА, гипотезы. Но это research partner, не CMO. Имеет смысл, если нужен вход в Novakid и разговор с CMO. English confident обязателен. Не цель, а мост.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">🌐 Apply: <a href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote" target="_blank">Novakid Recruitee</a></div>
+          <div class="contact-row contact-muted">HR email нет. После отклика — CMO Novakid в LinkedIn.</div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 Активна · авг 2026</span>
+          <a href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote/c/new" target="_blank" class="btn">Откликнуться →</a>
+        </div>
+      </div>
+
+      <div class="card" data-geo="cyprus" data-ind="saas" data-level="sr" data-loc="office" style="--card-accent:#787774">
+        <div class="match">55%</div>
+        <div class="card-top">
+          <div class="logo">🏢</div>
+          <div class="card-meta">
+            <div class="card-title">Marketing Manager · первый маркетолог</div>
+            <div class="card-company">GRS · corporate services, Limassol</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag tag-office">🏙️ Limassol</span>
+          <span class="tag tag-level-s">Senior / solo</span>
+          <span class="tag tag-ind">Corporate services</span>
+          <span class="tag tag-warn">⚠️ €35–45K — мало для CMO</span>
+        </div>
+        <div class="location">📍 Limassol · стратегия по Кипру и EU · бюджет, ивенты, ROI</div>
+        <div class="desc">Формально «маркетолог один». Вертикаль и вилка не соответствуют. Держим как запасной локальный вариант, не как цель.</div>
+        <div class="contacts">
+          <div class="contacts-label">Контакты</div>
+          <div class="contact-row">📧 <a href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager">emilios@grsrecruitment.com</a> · Emilios Eracleous · Ref <strong>11269</strong></div>
+          <div class="contact-row">☎️ +357 25 342 723</div>
+          <div class="contact-row">🌐 <a href="https://jobs.grsrecruitment.com/job/marketing-manager-11269.aspx" target="_blank">GRS listing</a></div>
+        </div>
+        <div class="card-foot">
+          <span class="post-date">📅 29 июля 2026</span>
+          <a href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager" class="btn">Написать Emilios →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="no-results" id="no-results">
+    <div style="font-size:40px;margin-bottom:8px">🌸</div>
+    <div style="font-weight:700;color:var(--text);margin-bottom:6px">Ничего не нашлось</div>
+    <div>Сбрось фильтры — на Кипре EdTech Head мало, смотри Remote.</div>
+  </div>
+
+  <!-- ════ SOURCES ════ -->
+  <section class="section" id="sources">
+    <h2 class="section-title">Источники</h2>
+    <p class="section-sub">LinkedIn — главный канал, как на доске Камиля. Дальше Кипр, EdTech-борды, карьеры компаний</p>
+
+    <div class="sources-group-label">LinkedIn Jobs · сохранить алерты</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=Head%20of%20Marketing%20OR%20CMO%20EdTech&amp;location=Cyprus&amp;f_TPR=r2592000" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🇨🇾</span><span class="source-name">LI · Кипр · Head / CMO</span><span class="source-badge badge-cy">Past month</span></div>
+        <div class="source-desc">Head of Marketing / CMO + EdTech, локация Cyprus.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Marketing%22%20OR%20CMO%20OR%20%22VP%20of%20Marketing%22%20EdTech&amp;f_TPR=r604800&amp;f_WT=2" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎯</span><span class="source-name">LI · EdTech Head remote</span><span class="source-badge badge-best">Past week</span></div>
+        <div class="source-desc">Head / CMO / VP + EdTech + Remote · последние 7 дней.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Product%20Marketing%22%20OR%20%22Product%20Marketing%20Lead%22%20EdTech&amp;f_TPR=r2592000&amp;f_WT=2" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🧩</span><span class="source-name">LI · Product Marketing Lead</span><span class="source-badge badge-good">PMM</span></div>
+        <div class="source-desc">Head of PMM / Product Marketing Lead EdTech remote.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Growth%22%20OR%20%22Head%20of%20Marketing%22&amp;location=Limassol%2C%20Cyprus&amp;f_TPR=r2592000" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🌊</span><span class="source-name">LI · Limassol Head</span><span class="source-badge badge-cy">Limassol</span></div>
+        <div class="source-desc">Все Head of Marketing / Growth в Лимасоле, не только EdTech.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=CMO%20OR%20%22Chief%20Marketing%20Officer%22%20education%20OR%20EdTech&amp;f_TPR=r2592000" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">👑</span><span class="source-name">LI · CMO EdTech</span><span class="source-badge badge-good">C-level</span></div>
+        <div class="source-desc">Редкие CMO. После отклика — писать hiring manager.</div>
+      </a>
+      <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Marketing%20Lead%22%20OR%20%22Head%20of%20Marketing%22%20LMS%20OR%20%22online%20courses%22&amp;f_TPR=r604800&amp;f_WT=2" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📚</span><span class="source-name">LI · LMS / courses</span><span class="source-badge badge-good">SaaS</span></div>
+        <div class="source-desc">Course platforms, LMS, creator education.</div>
+      </a>
+    </div>
+
+    <div class="sources-group-label">Кипр · локальные борды и рекрутеры</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://ergodotisi.com/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🇨🇾</span><span class="source-name">Ergodotisi</span><span class="source-badge badge-cy">#1 Кипр</span></div>
+        <div class="source-desc">Главная джоб-платформа Кипра. Фильтр Marketing / Limassol.</div>
+      </a>
+      <a class="source-card" href="https://www.grsrecruitment.com/vacancies/media-marketing-jobs-in-cyprus/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🧭</span><span class="source-name">GRS Recruitment</span><span class="source-badge badge-best">рекрутер</span></div>
+        <div class="source-desc">Hayley hayley@grsrecruitment.com · Emilios emilios@grsrecruitment.com</div>
+      </a>
+      <a class="source-card" href="https://www.learnworlds.com/company/careers/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎓</span><span class="source-name">LearnWorlds careers</span><span class="source-badge badge-cy">EdTech HQ</span></div>
+        <div class="source-desc">Прямо карьеры. Workable: apply.workable.com/learnworlds</div>
+      </a>
+      <a class="source-card" href="https://jobs.ashbyhq.com/welltech" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">💪</span><span class="source-name">Welltech Ashby</span><span class="source-badge badge-good">Limassol hub</span></div>
+        <div class="source-desc">Head of Growth, CRM, UA. CIS-команда.</div>
+      </a>
+      <a class="source-card" href="https://cyprusjobs.com/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🗞️</span><span class="source-name">CyprusJobs</span><span class="source-badge badge-ok">локально</span></div>
+        <div class="source-desc">Классифайд. Часто дубли Ergodotisi / GRS.</div>
+      </a>
+      <a class="source-card" href="https://www.cwjobs.com.cy/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">💼</span><span class="source-name">CWjobs Cyprus</span><span class="source-badge badge-ok">локально</span></div>
+        <div class="source-desc">Ещё один кипрский агрегатор.</div>
+      </a>
+    </div>
+
+    <div class="sources-group-label">EdTech · спецборды</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://edtechjobs.io/jobs/marketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📘</span><span class="source-name">EdTechJobs.io</span><span class="source-badge badge-best">спецборд</span></div>
+        <div class="source-desc">Marketing / PMM / Head. EU + US + remote.</div>
+      </a>
+      <a class="source-card" href="https://jobsboard.edsurge.com/categories/375/marketing-jobs/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🏫</span><span class="source-name">EdSurge</span><span class="source-badge badge-good">US EdTech</span></div>
+        <div class="source-desc">Часто US-only. Смотреть remote flag.</div>
+      </a>
+      <a class="source-card" href="https://hr.novakidschool.com/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🧒</span><span class="source-name">Novakid careers</span><span class="source-badge badge-best">kids EdTech</span></div>
+        <div class="source-desc">Remote GMT+3. Insights, Growth PM, Marketing.</div>
+      </a>
+      <a class="source-card" href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">⚖️</span><span class="source-name">Jurafuchs Personio</span><span class="source-badge badge-good">Legal EdTech</span></div>
+        <div class="source-desc">Head of Marketing открыт. Немецкий — вопрос.</div>
+      </a>
+      <a class="source-card" href="https://jobs.lever.co/preply" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🗣️</span><span class="source-name">Preply Lever</span><span class="source-badge badge-good">marketplace</span></div>
+        <div class="source-desc">Языки, growth, CRM. Часто Barcelona / remote EU.</div>
+      </a>
+      <a class="source-card" href="https://www.workatastartup.com/jobs?query=head%20of%20marketing%20edtech" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🚀</span><span class="source-name">YC Work at a Startup</span><span class="source-badge badge-ok">0→1</span></div>
+        <div class="source-desc">Первый маркетолог в молодых EdTech.</div>
+      </a>
+    </div>
+
+    <div class="sources-group-label">Remote-агрегаторы</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://wellfound.com/role/r/head-of-marketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🚀</span><span class="source-name">Wellfound</span><span class="source-badge badge-good">стартапы</span></div>
+        <div class="source-desc">Head of Marketing / CMO в стартапах.</div>
+      </a>
+      <a class="source-card" href="https://himalayas.app/jobs?q=head+of+marketing+edtech" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🏔️</span><span class="source-name">Himalayas</span><span class="source-badge badge-good">remote</span></div>
+        <div class="source-desc">Remote + timezone. EdTech Head / PMM.</div>
+      </a>
+      <a class="source-card" href="https://weworkremotely.com/remote-jobs/search?term=head+of+marketing+education" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🍭</span><span class="source-name">We Work Remotely</span><span class="source-badge badge-good">remote</span></div>
+        <div class="source-desc">Классика remote Marketing / EdTech.</div>
+      </a>
+      <a class="source-card" href="https://remotive.com/remote-jobs/marketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🛸</span><span class="source-name">Remotive</span><span class="source-badge badge-good">remote</span></div>
+        <div class="source-desc">Категория Marketing. Фильтр education.</div>
+      </a>
+      <a class="source-card" href="https://jobgether.com/remote-jobs?search=head%20of%20marketing%20edtech" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🔗</span><span class="source-name">Jobgether</span><span class="source-badge badge-ok">match</span></div>
+        <div class="source-desc">Иногда показывает hiring manager после apply.</div>
+      </a>
+      <a class="source-card" href="https://www.remoterocketship.com/country/cyprus/jobs/head-of-marketing/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🛰️</span><span class="source-name">RemoteRocketship CY</span><span class="source-badge badge-cy">Кипр remote</span></div>
+        <div class="source-desc">Remote Head of Marketing, фильтр Cyprus.</div>
+      </a>
+    </div>
+
+    <div class="sources-group-label">Карьеры компаний · проверять каждый раз</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://apply.workable.com/learnworlds/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎓</span><span class="source-name">LearnWorlds Workable</span><span class="source-badge badge-cy">Кипр</span></div>
+        <div class="source-desc">Все открытые роли, не только VP Marketing.</div>
+      </a>
+      <a class="source-card" href="https://careers.wargaming.net/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🎮</span><span class="source-name">Wargaming</span><span class="source-badge badge-ok">Nicosia</span></div>
+        <div class="source-desc">Не EdTech. Head marketing иногда открывается.</div>
+      </a>
+      <a class="source-card" href="https://gdev.com/careers" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">⚔️</span><span class="source-name">GDEV / Nexters</span><span class="source-badge badge-ok">NASDAQ CY</span></div>
+        <div class="source-desc">Gamedev. Только если появится CMO/Head 360°, не UA.</div>
+      </a>
+      <a class="source-card" href="https://jobs.lingokids.com/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🌈</span><span class="source-name">Lingokids</span><span class="source-badge badge-good">kids EdTech</span></div>
+        <div class="source-desc">Remote Spain-based. Сейчас мало маркетинга.</div>
+      </a>
+      <a class="source-card" href="https://www.360learning.com/careers" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🟠</span><span class="source-name">360Learning</span><span class="source-badge badge-good">LMS</span></div>
+        <div class="source-desc">B2B learning SaaS. EU remote бывает.</div>
+      </a>
+      <a class="source-card" href="https://www.thinkific.com/careers/" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">💡</span><span class="source-name">Thinkific</span><span class="source-badge badge-good">course SaaS</span></div>
+        <div class="source-desc">Прямой аналог Learme на западном рынке.</div>
+      </a>
+    </div>
+
+    <div class="sources-group-label">Telegram</div>
+    <div class="sources-grid">
+      <a class="source-card" href="https://t.me/marketing_jobs" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📣</span><span class="source-name">@marketing_jobs</span><span class="source-badge badge-tg">54K+</span></div>
+        <div class="source-desc">Фильтр: Head / CMO / EdTech / remote / Кипр.</div>
+      </a>
+      <a class="source-card" href="https://t.me/forallmarketing" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">📊</span><span class="source-name">@forallmarketing</span><span class="source-badge badge-tg">19K+</span></div>
+        <div class="source-desc">Performance и Head. Отсекать iGaming.</div>
+      </a>
+      <a class="source-card" href="https://t.me/evacuatejobs" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">✈️</span><span class="source-name">@evacuatejobs</span><span class="source-badge badge-tg">Global</span></div>
+        <div class="source-desc">International / Кипр / remote.</div>
+      </a>
+      <a class="source-card" href="https://t.me/zarubezhom_jobs" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🌍</span><span class="source-name">@zarubezhom_jobs</span><span class="source-badge badge-tg">Global</span></div>
+        <div class="source-desc">Международные компании, часто Кипр.</div>
+      </a>
+      <a class="source-card" href="https://t.me/Remoteit" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">💻</span><span class="source-name">@Remoteit</span><span class="source-badge badge-tg">Remote</span></div>
+        <div class="source-desc">Только remote digital.</div>
+      </a>
+      <a class="source-card" href="https://t.me/cyprus_jobs" target="_blank">
+        <div class="source-card-top"><span class="source-emoji">🇨🇾</span><span class="source-name">@cyprus_jobs</span><span class="source-badge badge-tg">Кипр</span></div>
+        <div class="source-desc">Если канал живой — локальные вакансии Limassol.</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="algo">
+    <h2 class="section-title">Алгоритм ежедневного поиска</h2>
+    <p class="section-sub">Что делать, когда пишешь «обнови поиск Марины»</p>
+    <div class="algo-step"><span class="algo-num">1</span><strong>LinkedIn Past week.</strong> Запросы выше + Easy Apply / Under 10 applicants. Без полного логина детали скрыты — роли всё равно снимать.</div>
+    <div class="algo-step"><span class="algo-num">2</span><strong>Кипр напрямую.</strong> Ergodotisi, GRS, LearnWorlds Workable, Welltech Ashby, CyprusJobs. Сначала EdTech, потом B2C / events. iGaming не берём.</div>
+    <div class="algo-step"><span class="algo-num">3</span><strong>EdTech карьеры:</strong> Novakid, Preply, Lingokids, Thinkific, 360Learning, Jurafuchs, YC.</div>
+    <div class="algo-step"><span class="algo-num">4</span><strong>Remote-борды:</strong> Himalayas, WWR, Remotive, Wellfound, Jobgether.</div>
+    <div class="algo-step"><span class="algo-num">5</span><strong>Telegram</strong> — только Head / Lead / CMO, EdTech или чистый B2C, remote / Кипр.</div>
+    <div class="algo-step"><span class="algo-num">6</span><strong>Дубли и контакты.</strong> Компания уже есть → обновить статус. На карточке: Apply + HR/hiring (email, LinkedIn). Если нет — явно «не найдены».</div>
+  </section>
+
+</div><!-- /main -->
+</div><!-- /page -->
+</div><!-- /col -->
+
+<aside class="toc-wrap" aria-label="Навигация">
+  <nav class="toc" id="toc">
+    <a href="#top" class="active">CMO | Product Marketing | EdTech | B2C</a>
+    <a href="#review">Ревью: куда искать</a>
+    <a href="#skills" class="sub">Компетенции</a>
+    <a href="#geo" class="sub">География и язык</a>
+    <a href="#cyprus">Кипр</a>
+    <a href="#head">Head / CMO</a>
+    <a href="#lead">Lead</a>
+    <a href="#senior">Senior</a>
+    <a href="#sources">Источники</a>
+    <a href="#algo" class="sub">Алгоритм поиска</a>
+  </nav>
+</aside>
+</div><!-- /shell -->
+
+<script>
+(function(){
+  const months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  const d = new Date();
+  const el = document.getElementById('live-date');
+  if (el) el.textContent = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+})();
+
+const state = { geo:'all', ind:'all', level:'all' };
+
+function applyFilters(){
+  const cards = document.querySelectorAll('.card');
+  let total = 0;
+  cards.forEach(c => {
+    const inds = (c.dataset.ind || '').split(/\s+/).filter(Boolean);
+    const ok =
+      (state.geo   === 'all' || c.dataset.geo   === state.geo) &&
+      (state.ind   === 'all' || inds.includes(state.ind)) &&
+      (state.level === 'all' || c.dataset.level === state.level);
+    c.classList.toggle('hidden', !ok);
+    if (ok) total++;
+  });
+  document.getElementById('total').textContent = total;
+  document.querySelectorAll('.section').forEach(sec => {
+    const vis = sec.querySelectorAll('.card:not(.hidden)').length;
+    const hasCards = sec.querySelector('.card');
+    if (hasCards) sec.classList.toggle('hidden', vis === 0);
+  });
+  document.getElementById('no-results').classList.toggle('show', total === 0);
+}
+
+document.querySelectorAll('[data-f]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const f = btn.dataset.f, v = btn.dataset.v;
+    document.querySelectorAll(`[data-f="${f}"]`).forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state[f] = v;
+    applyFilters();
+  });
+});
+
+applyFilters();
+document.getElementById('m-all').textContent = document.querySelectorAll('.card').length;
+
+/* Scroll-spy for TOC */
+const tocLinks = [...document.querySelectorAll('#toc a')];
+const ids = tocLinks.map(a => a.getAttribute('href')).filter(h => h && h.startsWith('#')).map(h => h.slice(1));
+const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+function setActive(id){
+  tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+}
+
+window.addEventListener('scroll', () => {
+  let current = 'top';
+  const y = window.scrollY + 120;
+  sections.forEach(sec => {
+    if (sec.offsetTop <= y) current = sec.id;
+  });
+  setActive(current);
+}, { passive: true });
+</script>
+</body>
+</html>
