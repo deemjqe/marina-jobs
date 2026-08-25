@@ -324,13 +324,6 @@ a { color: inherit; text-decoration: none; }
       <button class="pill active" data-f="geo" data-v="all">Все <span class="pill-cnt" id="m-all">0</span></button>
       <button class="pill" data-f="geo" data-v="cyprus">🇨🇾 Кипр</button>
       <button class="pill" data-f="geo" data-v="remote">🌐 Remote</button>
-      <button class="pill" data-f="geo" data-v="eu">🇪🇺 Другое</button>
-    </div>
-    <div class="filter-row">
-      <span class="filter-label">Компании</span>
-      <button class="pill active" data-f="origin" data-v="all">Все</button>
-      <button class="pill" data-f="origin" data-v="cis">СНГ-корни</button>
-      <button class="pill" data-f="origin" data-v="foreign">Иностранные</button>
     </div>
     <div class="filter-row">
       <span class="filter-label">Сфера</span>
@@ -341,14 +334,12 @@ a { color: inherit; text-decoration: none; }
       <button class="pill" data-f="ind" data-v="fintech">Fintech</button>
       <button class="pill" data-f="ind" data-v="saas">SaaS</button>
       <button class="pill" data-f="ind" data-v="gamedev">Gamedev</button>
-      <button class="pill" data-f="ind" data-v="igaming">iGaming</button>
     </div>
     <div class="filter-row">
       <span class="filter-label">Уровень</span>
       <button class="pill active" data-f="level" data-v="all">Все</button>
       <button class="pill" data-f="level" data-v="head">CMO / Head / VP</button>
       <button class="pill" data-f="level" data-v="lead">Lead</button>
-      <button class="pill" data-f="level" data-v="sr">Senior / solo</button>
     </div>
     <div class="filter-row">
       <span class="filter-label">Тип</span>
@@ -376,9 +367,9 @@ a { color: inherit; text-decoration: none; }
         <h3>В списке</h3>
         <ul>
           <li>CMO, Head of Marketing, Head of Product Marketing, Lead</li>
-          <li>Senior — если в компании маркетолог один</li>
+          <li>Руководитель направления: команда, результат, не «старший специалист»</li>
           <li>Сначала EdTech. Затем форумы, конференции, комьюнити</li>
-          <li>Команды из СНГ и иностранные. Напрямую и через агентства</li>
+          <li>Русскоязычные команды с корнями в СНГ. Напрямую и через агентства</li>
         </ul>
       </div>
       <div class="review-card no">
@@ -386,8 +377,9 @@ a { color: inherit; text-decoration: none; }
         <ul>
           <li>Только привлечение трафика, без продукта</li>
           <li>Только продажи, без маркетинга</li>
-          <li>Крупный B2B, где ждут свободный английский</li>
-          <li>Senior в большой компании, где маркетологов много</li>
+          <li>Senior и специалисты без команды</li>
+          <li>iGaming / casino</li>
+          <li>Англоязычные компании без русскоязычной команды</li>
         </ul>
       </div>
       <div class="review-card">
@@ -426,17 +418,13 @@ a { color: inherit; text-decoration: none; }
         <h3>1. Кипр</h3>
         <p>Limassol / Nicosia. Офис, hybrid или удалёнка с острова.</p>
       </div>
-      <div class="review-card">
-        <h3>2. Remote</h3>
-        <p>Любая страна. Совпадение с кипрским днём удобно — но вакансии из других поясов не убираются.</p>
-      </div>
-      <div class="review-card">
-        <h3>3. Другой город или страна</h3>
-        <p>Если можно работать удалённо или есть релокация.</p>
-      </div>
       <div class="review-card yes">
+        <h3>2. Remote</h3>
+        <p>Удалёнка. В объявлении может быть Москва или другой город — это хаб компании, не место работы.</p>
+      </div>
+      <div class="review-card">
         <h3>Команды</h3>
-        <p>С корнями в СНГ — русский как рабочий язык. Иностранные тоже в списке.</p>
+        <p>Только русскоязычные, с корнями в СНГ. Иностранные компании в подборку не попадают.</p>
       </div>
     </div>
   </section>
@@ -450,11 +438,7 @@ a { color: inherit; text-decoration: none; }
       </div>
       <div class="review-card yes">
         <h3>Lead</h3>
-        <p>Growth, product marketing, комьюнити — если это руководитель направления, не «старший специалист».</p>
-      </div>
-      <div class="review-card yes">
-        <h3>Senior / без уровня</h3>
-        <p>Если маркетолог в компании один: стратегия и руки. Не роль в большой корпорации, где маркетологов много.</p>
+        <p>Руководитель направления: Growth, product marketing, комьюнити. Не старший специалист без команды.</p>
       </div>
     </div>
   </section>
@@ -464,162 +448,15 @@ a { color: inherit; text-decoration: none; }
     <p class="section-sub">Офис, hybrid или хаб на острове</p>
     <div class="grid">
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="edtech saas" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#c45c7a">
-        <div class="match">94%</div>
-        <div class="card-top">
-          <div class="logo">🎓</div>
-          <div>
-            <div class="card-title">VP of Marketing — Growth &amp; Demand Generation</div>
-            <div class="card-company">LearnWorlds · LMS / course SaaS · HQ Limassol</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-geo">🇨🇾 Limassol / Athens / Remote EMEA</span>
-          <span class="tag tag-level-h">VP / Head</span>
-          <span class="tag tag-ind">EdTech</span>
-          <span class="tag tag-warn">⚠️ English C-level</span>
-        </div>
-        <div class="location">📍 Отчёт CMO Dario Derna · demand gen, content, lifecycle, paid</div>
-        <div class="desc">EdTech с офисом на Кипре. Маркетинг: спрос, контент, paid. Нужен сильный английский. Роль — VP рядом с действующим CMO.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.learnworlds.com" target="_blank">LearnWorlds</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank">Workable</a> · <a href="https://www.learnworlds.com/job/vp-of-marketing-growth-demand-generation-remote-emea/" target="_blank">JD</a></div>
-          <div class="contact-row">👤 Hiring: <a href="https://www.linkedin.com/in/constantinos-simaioforidis" target="_blank">Constantinos Simaioforidis</a></div>
-          <div class="contact-row">👤 CMO: <a href="https://www.linkedin.com/in/darioderna" target="_blank">Dario Derna</a> · CEO: <a href="https://www.linkedin.com/in/panossiozos" target="_blank">Panos Siozos</a></div>
-          <div class="contact-row">📧 <a href="mailto:press@learnworlds.com">press@learnworlds.com</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://apply.workable.com/learnworlds/j/7EE7ECCB4B" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
-        <div class="match">61%</div>
-        <div class="card-top">
-          <div class="logo">📣</div>
-          <div>
-            <div class="card-title">Head of Communications</div>
-            <div class="card-company">XM · forex / CFD · Limassol / Athens / Nicosia</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-geo">🇨🇾 Hybrid Кипр / Греция</span>
-          <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">Fintech</span>
-          <span class="tag tag-warn">⚠️ 15 лет corp comms</span>
-        </div>
-        <div class="location">📍 Отчёт CMO · PR, executive positioning, crisis</div>
-        <div class="desc">Коммуникации и PR, не весь маркетинг. Хаб на Кипре.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.xm.com" target="_blank">XM</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.eu.lever.co/xm/34009ea8-a0c2-47c8-bd4e-80ee1f044168" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://jobs.eu.lever.co/xm/34009ea8-a0c2-47c8-bd4e-80ee1f044168" target="_blank">Lever</a></div>
-          <div class="contact-row">📧 <a href="mailto:careers@xm.com">careers@xm.com</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://jobs.eu.lever.co/xm/34009ea8-a0c2-47c8-bd4e-80ee1f044168" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="events" data-level="head" data-posted="2026-07-28" data-type="agency" style="--card-accent:#6940a5">
-        <div class="match">70%</div>
-        <div class="card-top">
-          <div class="logo">🎤</div>
-          <div>
-            <div class="card-title">Head of Growth &amp; Strategy — Events</div>
-            <div class="card-company">GRS · fintech media / events · Limassol</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-office">🏙️ Limassol office</span>
-          <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">Ивенты / комьюнити</span>
-        </div>
-        <div class="location">📍 Рядом с COO Events</div>
-        <div class="desc">Ивенты: портфель брендов, партнёрства, sponsorship. Близко к опыту REFORUM. Английский обязателен.</div>
-        <div class="contacts">
-          <div class="contacts-label">Ссылки</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.grsrecruitment.com" target="_blank">GRS Recruitment</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.grsrecruitment.com/job/head-of-growth-and-strategy-11194.aspx" target="_blank">Вакансия</a></div>
-          <div class="contact-row">📧 <a href="mailto:hayley@grsrecruitment.com?subject=Ref%2011194%20Head%20of%20Growth">hayley@grsrecruitment.com</a> · Ref <strong>11194</strong></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 28 июля 2026</span>
-          <a href="mailto:hayley@grsrecruitment.com?subject=Ref%2011194%20Head%20of%20Growth" class="btn">Написать →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" data-posted="2026-06-01" data-type="agency" style="--card-accent:#c1440e">
-        <div class="match">62%</div>
-        <div class="card-top">
-          <div class="logo">📈</div>
-          <div>
-            <div class="card-title">Head of Marketing — founding team</div>
-            <div class="card-company">SkillDock / ULTRA · prop trading · Cyprus / Europe remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-remote">🌐 Remote Cyprus / Europe</span>
-          <span class="tag tag-level-h">Head · первый маркетолог</span>
-          <span class="tag tag-ind">Fintech</span>
-          <span class="tag tag-warn">⚠️ €48–72K</span>
-        </div>
-        <div class="location">📍 Founding team · GTM с нуля</div>
-        <div class="desc">Первый маркетолог на молодом продукте. Кипр / Европа. Вертикаль — prop trading, вилка скромная.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.ultrarecruitment.com" target="_blank">ULTRA Recruitment</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://cy.joblum.com/job/head-of-marketing-forex-prop-trading/29116" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://cy.joblum.com/job/head-of-marketing-forex-prop-trading/29116" target="_blank">Joblum / ULTRA Recruitment</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 май–июль 2026</span>
-          <a href="https://cy.joblum.com/job/head-of-marketing-forex-prop-trading/29116" target="_blank" class="btn">Открыть →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="fintech" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#0f7b6c">
-        <div class="match">72%</div>
-        <div class="card-top">
-          <div class="logo">💳</div>
-          <div>
-            <div class="card-title">Chief Marketing Officer — FinTech</div>
-            <div class="card-company">Talentin · клиент: fintech lender · Cyprus hybrid</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-geo">🇨🇾 Nicosia / Limassol / Larnaca · Hybrid</span>
-          <span class="tag tag-level-h">CMO</span>
-          <span class="tag tag-ind">Fintech</span>
-        </div>
-        <div class="location">📍 Бюджет $5M+ · multi-market acquisition</div>
-        <div class="desc">CMO на Кипре: бренд, привлечение, небольшая команда. Не EdTech. Вся функция и результат.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://talentin.com" target="_blank">Talentin</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://talentin.teamtailor.com/jobs/8004390-chief-marketing-officer-for-fintech-company" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://talentin.teamtailor.com/jobs/8004390-chief-marketing-officer-for-fintech-company" target="_blank">Talentin</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://talentin.teamtailor.com/jobs/8004390-chief-marketing-officer-for-fintech-company" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
       <div class="card" data-geo="cyprus" data-origin="cis" data-ind="fintech" data-level="head" data-posted="2026-07-31" data-type="agency" style="--card-accent:#c1440e">
         <div class="match">76%</div>
@@ -1180,130 +1017,13 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <div class="card" data-geo="remote" data-origin="foreign" data-ind="saas" data-level="head" data-posted="2026-07-30" data-type="inhouse" style="--card-accent:#2383e2">
-        <div class="match">58%</div>
-        <div class="card-top">
-          <div class="logo">🇨🇭</div>
-          <div>
-            <div class="card-title">Growth / Marketing / CMO · SaaS only</div>
-            <div class="card-company">Qualtir · Google WebApps · Swiss HQ · remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-remote">🌐 Remote-first</span>
-          <span class="tag tag-level-h">CMO / growth</span>
-          <span class="tag tag-ind">SaaS</span>
-          <span class="tag tag-warn">⚠️ $4K · English C1 · команда без русского</span>
-        </div>
-        <div class="location">📍 15M+ пользователей · tasksboard.com / gpt.space</div>
-        <div class="desc">IT-продукт only. Русский в команде не используют. Опубликована 30 июля.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://tasksboard.com" target="_blank">Qualtir</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135732108" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135732108" target="_blank">hh.ru/vacancy/135732108</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 30 июля 2026</span>
-          <a href="https://hh.ru/vacancy/135732108" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="remote" data-origin="foreign" data-ind="edtech" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
-        <div class="match">93%</div>
-        <div class="card-top">
-          <div class="logo">⚖️</div>
-          <div>
-            <div class="card-title">Head of Marketing · EdTech &amp; Legal Tech</div>
-            <div class="card-company">Jurafuchs · Berlin · 100% remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-remote">🌐 100% remote</span>
-          <span class="tag tag-level-h">Head · вся функция</span>
-          <span class="tag tag-ind">EdTech</span>
-          <span class="tag tag-warn">⚠️ немецкий в JD</span>
-        </div>
-        <div class="location">📍 До 4 reports · основатель отдаёт маркетинг</div>
-        <div class="desc">Вся функция: бюджет, каналы, продукт↔growth. Legal education. Без немецкого, скорее всего, нет.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.jurafuchs.de" target="_blank">Jurafuchs</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank">Personio</a></div>
-          <div class="contact-row">📧 <a href="mailto:support@jurafuchs.de">support@jurafuchs.de</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://jurafuchs.jobs.personio.de/?language=en" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="remote" data-origin="foreign" data-ind="saas" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
-        <div class="match">68%</div>
-        <div class="card-top">
-          <div class="logo">📦</div>
-          <div>
-            <div class="card-title">Head of Marketing</div>
-            <div class="card-company">Easyship · shipping SaaS · Remote Europe / London</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-remote">🌐 Remote EU</span>
-          <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">SaaS · B2B</span>
-          <span class="tag tag-warn">⚠️ B2B demand gen</span>
-        </div>
-        <div class="location">📍 SEO / content / AI search · 8+ лет SaaS</div>
-        <div class="desc">Иностранный SaaS. Не EdTech и не B2C. Нужен B2B inbound.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.easyship.com" target="_blank">Easyship</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://job-boards.greenhouse.io/easyship/jobs/4680863006" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://job-boards.greenhouse.io/easyship/jobs/4680863006" target="_blank">Greenhouse</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://job-boards.greenhouse.io/easyship/jobs/4680863006" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
-      <div class="card" data-geo="eu" data-origin="foreign" data-ind="saas" data-level="head" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#6940a5">
-        <div class="match">64%</div>
-        <div class="card-top">
-          <div class="logo">🟣</div>
-          <div>
-            <div class="card-title">Head of Growth</div>
-            <div class="card-company">fonio · Vienna / Munich / Barcelona / London</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-office">🏙️ On-site EU</span>
-          <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">SaaS</span>
-          <span class="tag tag-warn">⚠️ €150–250K · не remote</span>
-        </div>
-        <div class="location">📍 Офис в одном из хабов</div>
-        <div class="desc">Сильная вилка. Нужна релокация в EU. Не Кипр.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.fonio.com" target="_blank">fonio</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://jobs.ashbyhq.com/fonio/cb317a2c-5e38-4d10-b407-ab5355c94e8d" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://jobs.ashbyhq.com/fonio/cb317a2c-5e38-4d10-b407-ab5355c94e8d" target="_blank">Ashby</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://jobs.ashbyhq.com/fonio/cb317a2c-5e38-4d10-b407-ab5355c94e8d" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
       <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#c45c7a">
         <div class="match">91%</div>
@@ -1465,35 +1185,7 @@ a { color: inherit; text-decoration: none; }
     <h2 class="section-title">Lead</h2>
     <div class="grid">
 
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="lead" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#c45c7a">
-        <div class="match">86%</div>
-        <div class="card-top">
-          <div class="logo">🧒</div>
-          <div>
-            <div class="card-title">Senior Growth Product Manager · Activation &amp; Funnel</div>
-            <div class="card-company">Novakid · kids English · remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-remote">🌐 Remote · европейский день</span>
-          <span class="tag tag-level-l">Lead / Growth PM</span>
-          <span class="tag tag-ind">EdTech</span>
-        </div>
-        <div class="location">📍 Trial → paywall → CRM</div>
-        <div class="desc">Воронка trial → оплата, CRM. Это Growth PM, не Head.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.novakidschool.com" target="_blank">Novakid</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank">Novakid Recruitee</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://hr.novakidschool.com/o/senior-growth-product-manager-activation-funnel-innovation-remote" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
+      
 
       <div class="card" data-geo="remote" data-origin="cis" data-ind="health" data-level="lead" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#0f7b6c">
         <div class="match">81%</div>
@@ -1522,328 +1214,6 @@ a { color: inherit; text-decoration: none; }
         <div class="card-foot">
           <span class="post-date">📅 авг 2026</span>
           <a href="https://jobs.ashbyhq.com/welltech" target="_blank" class="btn">Открыть →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section" id="senior">
-    <h2 class="section-title">Senior / solo</h2>
-    <p class="section-sub">Маркетолог в компании один — или сильная зона рядом с CMO</p>
-    <div class="grid">
-
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="edtech" data-level="sr" data-posted="2026-08-07" data-type="inhouse" style="--card-accent:#2383e2">
-        <div class="match">78%</div>
-        <div class="card-top">
-          <div class="logo">🔎</div>
-          <div>
-            <div class="card-title">Senior Consumer &amp; Marketing Insights Manager</div>
-            <div class="card-company">Novakid · remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-remote">🌐 Remote</span>
-          <span class="tag tag-level-s">Senior</span>
-          <span class="tag tag-ind">EdTech · Insights</span>
-        </div>
-        <div class="location">📍 Исследования, панели · не ответственность за выручку</div>
-        <div class="desc">Исследования аудитории, не CMO. Можно как вход в Novakid.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.novakidschool.com" target="_blank">Novakid</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote/c/new" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote" target="_blank">Novakid Recruitee</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://hr.novakidschool.com/o/senior-consumer-marketing-insights-manager-remote/c/new" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="saas" data-level="sr" data-posted="2026-07-29" data-type="agency" style="--card-accent:#787774">
-        <div class="match">55%</div>
-        <div class="card-top">
-          <div class="logo">🏢</div>
-          <div>
-            <div class="card-title">Marketing Manager · первый маркетолог</div>
-            <div class="card-company">GRS · corporate services · Limassol</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-office">🏙️ Limassol</span>
-          <span class="tag tag-level-s">Senior / solo</span>
-          <span class="tag tag-warn">⚠️ €35–45K</span>
-        </div>
-        <div class="location">📍 Кипр + EU · бюджет, ивенты</div>
-        <div class="desc">Единственный маркетолог в компании. Вилка ниже CMO. Кипр, офис.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://www.grsrecruitment.com" target="_blank">GRS</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager" target="_blank">Вакансия</a></div>
-          <div class="contact-row">📧 <a href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager">emilios@grsrecruitment.com</a> · Ref <strong>11269</strong></div>
-          <div class="contact-row">☎️ +357 25 342 723</div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 29 июля 2026</span>
-          <a href="mailto:emilios@grsrecruitment.com?subject=Ref%2011269%20Marketing%20Manager" class="btn">Написать →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section" id="igaming">
-    <h2 class="section-title">iGaming</h2>
-    <p class="section-sub">Отдельный блок в конце. Кипр, remote, релокация</p>
-    <div class="grid">
-
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-11" data-type="inhouse" style="--card-accent:#1d1d1f">
-        <div class="match">70%</div>
-        <div class="card-top">
-          <div class="logo">🇧🇾</div>
-          <div>
-            <div class="card-title">Head of Marketing</div>
-            <div class="card-company">Кэтлоджик · iGaming · remote · Минск как хаб</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-remote">🌐 Remote</span>
-          <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">iGaming</span>
-          <span class="tag tag-warn">⚠️ €4–5K · нужен опыт iGaming</span>
-        </div>
-        <div class="location">📍 Performance, affiliate, retention, brand · FTD / NGR / GGR</div>
-        <div class="desc">Полностью удалённо. Русский + English B2. Опубликована 11 августа.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 Кэтлоджик · <span class="contact-muted">сайт не найден</span></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135620251" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135620251" target="_blank">hh.ru/vacancy/135620251</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 11 августа 2026</span>
-          <a href="https://hh.ru/vacancy/135620251" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-07-23" data-type="inhouse" style="--card-accent:#1d1d1f">
-        <div class="match">72%</div>
-        <div class="card-top">
-          <div class="logo">🎯</div>
-          <div>
-            <div class="card-title">CMO / Marketing Director</div>
-            <div class="card-company">Easy Hunt · iGaming B2C · Кипр · remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-geo">🇨🇾 Кипр · remote</span>
-          <span class="tag tag-level-h">CMO</span>
-          <span class="tag tag-ind">iGaming</span>
-          <span class="tag tag-warn">⚠️ нужен опыт iGaming</span>
-        </div>
-        <div class="location">📍 Стратегия, media buying, affiliate, CRM, бренд · РФ / СНГ</div>
-        <div class="desc">ГПХ или ИП — от локации. Опубликована 23 июля.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 Easy Hunt · <span class="contact-muted">сайт не найден</span></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135529350" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135529350" target="_blank">hh.ru/vacancy/135529350</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 23 июля 2026</span>
-          <a href="https://hh.ru/vacancy/135529350" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-07-21" data-type="inhouse" style="--card-accent:#1d1d1f">
-        <div class="match">64%</div>
-        <div class="card-top">
-          <div class="logo">🪙</div>
-          <div>
-            <div class="card-title">CMO · Crypto Casino</div>
-            <div class="card-company">Бизоникс · запуск крипто-казино · Минск / remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-remote">🌐 Remote / гибрид Минск</span>
-          <span class="tag tag-level-h">CMO · с нуля</span>
-          <span class="tag tag-ind">iGaming</span>
-          <span class="tag tag-warn">⚠️ iGaming + crypto желательно</span>
-        </div>
-        <div class="location">📍 Affiliate, инфлюенсеры, комьюнити, CRM · опцион</div>
-        <div class="desc">Собственная платформа и Web3. Опубликована 21 июля.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 Бизоникс · <span class="contact-muted">сайт не найден</span></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://hh.ru/vacancy/135429437" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://hh.ru/vacancy/135429437" target="_blank">hh.ru/vacancy/135429437</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 21 июля 2026</span>
-          <a href="https://hh.ru/vacancy/135429437" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-13" data-type="inhouse" style="--card-accent:#1d1d1f">
-        <div class="match">69%</div>
-        <div class="card-top">
-          <div class="logo">🎰</div>
-          <div>
-            <div class="card-title">Head of Marketing</div>
-            <div class="card-company">STARTRIBE LTD · iGaming · Limassol office</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-office">🏙️ Limassol 5/2</span>
-          <span class="tag tag-level-h">Head</span>
-          <span class="tag tag-ind">iGaming</span>
-          <span class="tag tag-warn">⚠️ 3+ лет iGaming</span>
-        </div>
-        <div class="location">📍 P&amp;L, affiliate, media buying, несколько GEO · ТК Кипра</div>
-        <div class="desc">Опубликована 13 августа. Офис Limassol. English C1. iGaming обязателен.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 STARTRIBE · <span class="contact-muted">сайт не найден</span></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://cyprus.hh.ru/vacancy/136225254" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://cyprus.hh.ru/vacancy/136225254" target="_blank">cyprus.hh.ru/vacancy/136225254</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 13 августа 2026</span>
-          <a href="https://cyprus.hh.ru/vacancy/136225254" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="cyprus" data-origin="foreign" data-ind="igaming" data-level="head" data-posted="2026-06-15" data-type="inhouse" style="--card-accent:#1d1d1f">
-        <div class="match">67%</div>
-        <div class="card-top">
-          <div class="logo">🌍</div>
-          <div>
-            <div class="card-title">Chief Marketing Officer</div>
-            <div class="card-company">B2Tech · betting · Limassol · Africa → global</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-inhouse">In-house</span>
-          <span class="tag tag-foreign">Иностранные</span>
-          <span class="tag tag-office">🏙️ Cyprus reloc</span>
-          <span class="tag tag-level-h">CMO</span>
-          <span class="tag tag-ind">iGaming</span>
-          <span class="tag tag-warn">⚠️ Hebrew plus</span>
-        </div>
-        <div class="location">📍 Отчёт CEO · 20 рынков Африки · релокация семьи</div>
-        <div class="desc">Вся функция: бренд, growth, player experience. Build-роль. English fluent.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 B2Tech · <span class="contact-muted">сайт не найден</span></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://www.cypruswork.com/job/105592/chief-marketing-officer/" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://www.cypruswork.com/job/105592/chief-marketing-officer/" target="_blank">Cyprus Work</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 июнь 2026 · проверить статус</span>
-          <a href="https://www.cypruswork.com/job/105592/chief-marketing-officer/" target="_blank" class="btn">Открыть →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#1d1d1f">
-        <div class="match">65%</div>
-        <div class="card-top">
-          <div class="logo">🎲</div>
-          <div>
-            <div class="card-title">CMO · iGaming B2C</div>
-            <div class="card-company">RocketHunt · online casino · Cyprus reloc</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-geo">🇨🇾 Релокация на Кипр</span>
-          <span class="tag tag-level-h">CMO</span>
-          <span class="tag tag-ind">iGaming</span>
-        </div>
-        <div class="location">📍 Performance, affiliate, CRM, brand · рынки РФ / СНГ</div>
-        <div class="desc">Нужен опыт CMO в B2C casino. Пакет релокации.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://rockethunt.ai" target="_blank">RocketHunt</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://rockethunt.ai/en/vacancies/89e286c3-8025-4daf-a4f3-3b4fdf15f770" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://rockethunt.ai/en/vacancies/89e286c3-8025-4daf-a4f3-3b4fdf15f770" target="_blank">RocketHunt</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://rockethunt.ai/en/vacancies/89e286c3-8025-4daf-a4f3-3b4fdf15f770" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="remote" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#1d1d1f">
-        <div class="match">63%</div>
-        <div class="card-top">
-          <div class="logo">🪙</div>
-          <div>
-            <div class="card-title">CMO for iGaming · Crypto Casino</div>
-            <div class="card-company">Talentin · NDA · remote</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-remote">🌐 Fully remote</span>
-          <span class="tag tag-level-h">CMO · с нуля</span>
-          <span class="tag tag-ind">iGaming</span>
-        </div>
-        <div class="location">📍 Команда 200+ · запуск crypto casino</div>
-        <div class="desc">Маркетинг с нуля, P&amp;L, партнёрская сеть. Нужен crypto / Web3 / iGaming.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://talentin.com" target="_blank">Talentin</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://talentin.teamtailor.com/jobs/7144931-chief-marketing-officer-for-igaming" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://talentin.teamtailor.com/jobs/7144931-chief-marketing-officer-for-igaming" target="_blank">Talentin</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://talentin.teamtailor.com/jobs/7144931-chief-marketing-officer-for-igaming" target="_blank" class="btn">Откликнуться →</a>
-        </div>
-      </div>
-
-      <div class="card" data-geo="cyprus" data-origin="cis" data-ind="igaming" data-level="head" data-posted="2026-08-07" data-type="agency" style="--card-accent:#1d1d1f">
-        <div class="match">62%</div>
-        <div class="card-top">
-          <div class="logo">📍</div>
-          <div>
-            <div class="card-title">Regional CMO</div>
-            <div class="card-company">RocketHunt · high-risk B2C · Cyprus reloc</div>
-          </div>
-        </div>
-        <div class="tags">
-          <span class="tag tag-agency">Агентство</span>
-          <span class="tag tag-cis">СНГ-корни</span>
-          <span class="tag tag-geo">🇨🇾 Remote / hybrid / reloc</span>
-          <span class="tag tag-level-h">CMO</span>
-          <span class="tag tag-ind">iGaming</span>
-        </div>
-        <div class="location">📍 GGR региона · жильё на весь срок</div>
-        <div class="desc">Региональный рост: acquisition, affiliate, influencer, CRM. High-risk B2C.</div>
-        <div class="contacts">
-          <div class="contacts-label">Контакты</div>
-          <div class="contact-row">🏢 <a class="link-company" href="https://rockethunt.ai" target="_blank">RocketHunt</a></div>
-          <div class="contact-row">📄 <a class="link-vacancy" href="https://rockethunt.ai/en/vacancies/bec49223-06c4-4484-a523-b50388457e74" target="_blank">Вакансия</a></div>
-          <div class="contact-row">🌐 <a href="https://rockethunt.ai/en/vacancies/bec49223-06c4-4484-a523-b50388457e74" target="_blank">RocketHunt</a></div>
-        </div>
-        <div class="card-foot">
-          <span class="post-date">📅 авг 2026</span>
-          <a href="https://rockethunt.ai/en/vacancies/bec49223-06c4-4484-a523-b50388457e74" target="_blank" class="btn">Откликнуться →</a>
         </div>
       </div>
 
@@ -1889,10 +1259,6 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">🎤</span><span class="source-name">hh.ru · ивенты / комьюнити</span><span class="source-badge badge-best">ивенты</span></div>
         <div class="source-desc">Форумы, конференции, сообщества.</div>
       </a>
-      <a class="source-card" href="https://hh.ru/search/vacancy?text=%22%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%22+OR+%22%D0%B5%D0%B4%D0%B8%D0%BD%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%22+OR+%22founding+marketer%22&amp;schedule=remote" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">👤</span><span class="source-name">hh.ru · solo / первый маркетолог</span><span class="source-badge badge-good">Senior</span></div>
-        <div class="source-desc">Подходит, если маркетолог в компании один.</div>
-      </a>
     </div>
 
     <div class="sources-group-label">Агрегаторы</div>
@@ -1937,10 +1303,6 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">🕸️</span><span class="source-name">Jooble</span><span class="source-badge badge-ok">метапоиск</span></div>
         <div class="source-desc">Склеивает hh, Superjob, карьеры.</div>
       </a>
-      <a class="source-card" href="https://otta.com/jobs?search=head+of+marketing" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🟣</span><span class="source-name">Otta</span><span class="source-badge badge-good">EU стартапы</span></div>
-        <div class="source-desc">Head / PMM в европейских стартапах.</div>
-      </a>
     </div>
 
     <div class="sources-group-label">LinkedIn и соцсети</div>
@@ -1951,7 +1313,7 @@ a { color: inherit; text-decoration: none; }
       </a>
       <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Marketing%22%20OR%20CMO%20OR%20%22VP%20of%20Marketing%22&amp;f_TPR=r604800&amp;f_WT=2" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🌐</span><span class="source-name">LI · Head remote</span><span class="source-badge badge-best">Past week</span></div>
-        <div class="source-desc">Remote · 7 дней. Акцент на СНГ-корни.</div>
+        <div class="source-desc">Remote · 7 дней. Русскоязычные команды.</div>
       </a>
       <a class="source-card" href="https://www.linkedin.com/jobs/search/?keywords=%22Head%20of%20Product%20Marketing%22%20OR%20%22Product%20Marketing%20Lead%22%20OR%20%22PMM%20Lead%22&amp;f_TPR=r604800&amp;f_WT=2" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🧩</span><span class="source-name">LI · PMM / Product Marketing</span><span class="source-badge badge-good">PMM</span></div>
@@ -1973,10 +1335,6 @@ a { color: inherit; text-decoration: none; }
         <div class="source-card-top"><span class="source-emoji">📘</span><span class="source-name">Facebook · Cyprus Jobs</span><span class="source-badge badge-cy">Кипр</span></div>
         <div class="source-desc">Группы вакансий Кипра. Marketing / events.</div>
       </a>
-      <a class="source-card" href="https://www.xing.com/jobs/search?keywords=Head%20of%20Marketing" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">✖️</span><span class="source-name">Xing</span><span class="source-badge badge-ok">EU</span></div>
-        <div class="source-desc">Только если релокация в EU. Не Кипр.</div>
-      </a>
     </div>
 
     <div class="sources-group-label">Кипр · локальные борды</div>
@@ -1987,7 +1345,7 @@ a { color: inherit; text-decoration: none; }
       </a>
       <a class="source-card" href="https://www.cypruswork.com/jobs/?q=Head+of+Marketing+CMO" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🗞️</span><span class="source-name">Cyprus Work</span><span class="source-badge badge-cy">Кипр</span></div>
-        <div class="source-desc">CMO / Head, в том числе iGaming.</div>
+        <div class="source-desc">CMO / Head на Кипре.</div>
       </a>
       <a class="source-card" href="https://www.carierista.com/" target="_blank">
         <div class="source-card-top"><span class="source-emoji">📌</span><span class="source-name">Carierista</span><span class="source-badge badge-ok">Кипр</span></div>
@@ -2013,17 +1371,9 @@ a { color: inherit; text-decoration: none; }
 
     <div class="sources-group-label">Карьеры компаний</div>
     <div class="sources-grid">
-      <a class="source-card" href="https://apply.workable.com/learnworlds/" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🎓</span><span class="source-name">LearnWorlds</span><span class="source-badge badge-cy">EdTech HQ</span></div>
-        <div class="source-desc">Workable. Все открытые роли.</div>
-      </a>
       <a class="source-card" href="https://jobs.ashbyhq.com/welltech" target="_blank">
         <div class="source-card-top"><span class="source-emoji">💪</span><span class="source-name">Welltech Ashby</span><span class="source-badge badge-good">Limassol hub</span></div>
         <div class="source-desc">Head of Growth, CRM, UA.</div>
-      </a>
-      <a class="source-card" href="https://jobs.eu.lever.co/xm/" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">📈</span><span class="source-name">XM Lever</span><span class="source-badge badge-cy">Кипр fintech</span></div>
-        <div class="source-desc">Head of Communications и regional marketing.</div>
       </a>
       <a class="source-card" href="https://hr.novakidschool.com/" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🧒</span><span class="source-name">Novakid</span><span class="source-badge badge-good">kids EdTech</span></div>
@@ -2060,10 +1410,6 @@ a { color: inherit; text-decoration: none; }
       <a class="source-card" href="https://remoteok.com/remote-marketing-jobs" target="_blank">
         <div class="source-card-top"><span class="source-emoji">🆗</span><span class="source-name">Remote OK</span><span class="source-badge badge-good">remote</span></div>
         <div class="source-desc">Marketing / Head / Community.</div>
-      </a>
-      <a class="source-card" href="https://www.welcometothejungle.com/en/jobs?query=head%20of%20marketing" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🌴</span><span class="source-name">Welcome to the Jungle</span><span class="source-badge badge-ok">EU</span></div>
-        <div class="source-desc">Head / PMM в EU. Смотреть remote.</div>
       </a>
     </div>
 
@@ -2134,22 +1480,6 @@ a { color: inherit; text-decoration: none; }
         <div class="source-desc">Директор по маркетингу в ивент-бизнесе.</div>
       </a>
     </div>
-
-    <div class="sources-group-label">iGaming · в конце</div>
-    <div class="sources-grid">
-      <a class="source-card" href="https://ru.ingamejob.com/ru/jobs/marketing-and-pr" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🎮</span><span class="source-name">InGameJob</span><span class="source-badge badge-ok">gamedev / iGaming</span></div>
-        <div class="source-desc">CMO / Head of Marketing.</div>
-      </a>
-      <a class="source-card" href="https://rockethunt.ai/en/vacancies?query=CMO" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🚀</span><span class="source-name">RocketHunt</span><span class="source-badge badge-ok">iGaming / high-risk</span></div>
-        <div class="source-desc">CMO Кипр + релокация.</div>
-      </a>
-      <a class="source-card" href="https://talentin.teamtailor.com/" target="_blank">
-        <div class="source-card-top"><span class="source-emoji">🧲</span><span class="source-name">Talentin</span><span class="source-badge badge-ok">iGaming / fintech</span></div>
-        <div class="source-desc">CMO remote и Кипр.</div>
-      </a>
-    </div>
   </section>
 
 </div>
@@ -2165,8 +1495,6 @@ a { color: inherit; text-decoration: none; }
     <a href="#cyprus">Кипр</a>
     <a href="#head">Head / CMO</a>
     <a href="#lead">Lead</a>
-    <a href="#senior">Senior / solo</a>
-    <a href="#igaming">iGaming</a>
     <a href="#sources">Источники</a>
   </nav>
 </aside>
